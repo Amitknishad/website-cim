@@ -1,0 +1,9 @@
+dispatch:
+  - url: "m.piyushgoyal.org.in/*"
+    service: m
+  - url: "api.piyushgoyal.org.in/*"
+    service: api
+  - url: "grievances.piyushgoyal.org.in/*"
+    service: grievances
+  - url: "oms.piyushgoyal.org.in/*"
+    service: oms    
