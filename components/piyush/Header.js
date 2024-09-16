@@ -18,7 +18,7 @@ const Header = () => {
       {/* Left Side: Image and Title */}
       <Grid item xs={12} md={6} container alignItems="center" sx={{ display: 'flex' }}>
         {/* Image on the left */}
-        <Image src="/piyush.jpeg" alt="Piyush Goyal" width={50} height={50} style={{ borderRadius: '50%' }} />
+        <Image src="/piyush.jpeg" alt="Piyush Goyal" width={60} height={60} style={{ borderRadius: '50%' }} />
         <Typography variant="h6" sx={{ marginLeft: 2 }}>
           <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#E17000' }}> {/* Orange Color for Name */}
             Piyush Goyal
@@ -32,13 +32,13 @@ const Header = () => {
       {/* Right Side: Social Media Icons and Button */}
       <Grid item xs={12} md={6} container justifyContent="flex-end" alignItems="center">
         <IconButton color="inherit">
-          <InstagramIcon sx={{ color: '#E17000' }} />  {/* Orange Icon Color */}
+          <InstagramIcon sx={{ color: '#E17000', fontSize: 35 }} />  {/* Increased Icon Size */}
         </IconButton>
         <IconButton color="inherit">
-          <FacebookIcon sx={{ color: '#E17000' }} />   {/* Orange Icon Color */}
+          <FacebookIcon sx={{ color: '#E17000', fontSize: 35 }} />   {/* Increased Icon Size */}
         </IconButton>
         <IconButton color="inherit">
-          <YouTubeIcon sx={{ color: '#E17000' }} />    {/* Orange Icon Color */}
+          <YouTubeIcon sx={{ color: '#E17000', fontSize: 35 }} />    {/* Increased Icon Size */}
         </IconButton>
         <Button
           variant="outlined"
@@ -47,6 +47,7 @@ const Header = () => {
             borderColor: '#E17000',  // Orange border
             color: '#E17000',        // Orange text
             borderRadius: "20px",
+            padding:"7px",
             '&:hover': {
               borderColor: '#E17000',
               backgroundColor: 'rgba(225, 112, 0, 0.1)', // Light orange hover
