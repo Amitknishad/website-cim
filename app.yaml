@@ -1,0 +1,27 @@
+env: standard
+# runtime: python27 not working for nextjs
+#runtime: nodejs10 not working for nextjs
+runtime: nodejs20
+# what follows will be optional in the future:
+
+# service: default
+service: oms
+# service: api
+# service: m
+# service: grievances
+
+# delete manually => ./build/cache/webpack/client-production/0.pack file ( 300+ MB )
+
+# npm run build --prod=true
+# gcloud app deploy --version=live
+
+instance_class: F1
+
+automatic_scaling:
+  min_instances: 0
+  max_instances: 1
+
+handlers:
+  - url: /.*
+    secure: always
+    script: auto
