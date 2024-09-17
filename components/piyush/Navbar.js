@@ -129,7 +129,7 @@ const Navbar = () => {
                     transition: 'width 0.3s ease-in-out',
                     opacity: searchOpen ? 1 : 0,
                     backgroundColor: 'white',
-                    borderRadius: '4px',
+                    borderRadius: '30px',
                     padding: '5px 10px',
                   }}
                   placeholder="Search..."

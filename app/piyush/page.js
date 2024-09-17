@@ -15,7 +15,6 @@ const Home = () => {
             <Header />
             <Navbar />
             <CarouselComponent />
-   
         </Box>
     )
 }
