@@ -2,31 +2,30 @@
 import React from 'react';
 import Slider from 'react-slick';
 import Image from 'next/image';
-import { Box } from '@mui/material';
+import { Box, useMediaQuery } from '@mui/material';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import styles from '../../styles/carousel.module.css'; // Import custom CSS module
 
 const images = [
   {
     label: 'Image 1',
-    imgPath: '/carousel1.jpg',
+    imgPath: '/piyush1.jpeg',
   },
   {
     label: 'Image 2',
-    imgPath: '/carousel2.jpg',
+    imgPath: '/piyush2.jpeg',
   },
   {
     label: 'Image 3',
-    imgPath: '/carousel3.jpg',
+    imgPath: '/piyush3.jpeg',
   },
   {
     label: 'Image 4',
-    imgPath: '/carousel4.jpg',
+    imgPath: '/piyush4.jpeg',
   },
   {
     label: 'Image 5',
-    imgPath: '/carousel5.jpg',
+    imgPath: '/piyush5.jpeg',
   },
 ];
 
@@ -38,17 +37,17 @@ function CarouselComponent() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true, // Enable Next and Prev arrows
-    autoplay: true, // Enable autoplay
-    autoplaySpeed: 3000, // 3 seconds per slide
+    arrows: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
     pauseOnHover: true,
-    swipeToSlide: true, // Allow swiping between slides
+    swipeToSlide: true,
     appendDots: dots => (
       <div
         style={{
           position: 'absolute',
-          bottom: '20px', // Position 20px from the bottom
-          right: '20px',  // Position 20px from the right
+          bottom: '20px',
+          right: '20px',
           display: 'flex',
           justifyContent: 'flex-end',
           alignItems: 'center',
@@ -58,7 +57,6 @@ function CarouselComponent() {
         <ul style={{ margin: '0px' }}> {dots} </ul>
       </div>
     ),
-    
     customPaging: i => (
       <div
         style={{
@@ -71,16 +69,30 @@ function CarouselComponent() {
     ),
   };
 
+  // Detect mobile screen size (example: max-width 600px)
+  const isMobile = useMediaQuery('(max-width:600px)');
+
   return (
-    <Box sx={{ width: '100%', height: '100vh', position: 'relative', marginBottom: "40px" }}>
+    <Box sx={{ width: '100vw', position: 'relative', marginBottom: '40px' }}>
       <Slider {...settings}>
         {images.map((image, index) => (
-          <Box key={index} sx={{ position: 'relative', height: '100vh' }}>
+          <Box
+            key={index}
+            sx={{
+              width: '100%',
+              position: 'relative',
+              display: 'flex',
+              height: isMobile ? '50vh' : '100vh', // Set height for mobile and desktop
+              justifyContent: 'center',
+              alignItems: 'center',
+              overflow: 'hidden',
+            }}
+          >
             <Image
               src={image.imgPath}
               alt={image.label}
               layout="fill"
-              objectFit="cover"
+              objectFit={isMobile ? 'contain' : 'cover'} // Set objectFit based on screen size
               quality={100}
               priority
             />
