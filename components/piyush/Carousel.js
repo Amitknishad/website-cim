@@ -6,26 +6,49 @@ import { Box, useMediaQuery } from '@mui/material';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+// const images = [
+//   {
+//     label: 'Image 1',
+//     imgPath: '/piyush1.jpeg',
+//   },
+//   {
+//     label: 'Image 2',
+//     imgPath: '/piyush2.jpeg',
+//   },
+//   {
+//     label: 'Image 3',
+//     imgPath: '/piyush3.jpeg',
+//   },
+//   {
+//     label: 'Image 4',
+//     imgPath: '/piyush4.jpeg',
+//   },
+//   {
+//     label: 'Image 5',
+//     imgPath: '/piyush5.jpeg',
+//   },
+// ];
+
 const images = [
   {
     label: 'Image 1',
-    imgPath: '/piyush1.jpeg',
+    imgPath: '/carousel1.jpg',
   },
   {
     label: 'Image 2',
-    imgPath: '/piyush2.jpeg',
+    imgPath: '/carousel2.jpg',
   },
   {
     label: 'Image 3',
-    imgPath: '/piyush3.jpeg',
+    imgPath: '/carousel3.jpg',
   },
   {
     label: 'Image 4',
-    imgPath: '/piyush4.jpeg',
+    imgPath: '/carousel4.jpg',
   },
   {
     label: 'Image 5',
-    imgPath: '/piyush5.jpeg',
+    imgPath: '/carousel5.jpg',
   },
 ];
 
@@ -73,7 +96,7 @@ function CarouselComponent() {
   const isMobile = useMediaQuery('(max-width:600px)');
 
   return (
-    <Box sx={{ width: '100vw', position: 'relative', marginBottom: '40px' }}>
+    <Box sx={{ width: '100vw', position: 'relative'}}>
       <Slider {...settings}>
         {images.map((image, index) => (
           <Box
