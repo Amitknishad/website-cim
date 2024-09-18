@@ -82,20 +82,27 @@ function CarouselComponent() {
               width: '100%',
               position: 'relative',
               display: 'flex',
-              height: isMobile ? '50vh' : '100vh', // Set height for mobile and desktop
               justifyContent: 'center',
               alignItems: 'center',
               overflow: 'hidden',
             }}
           >
-            <Image
-              src={image.imgPath}
-              alt={image.label}
-              layout="fill"
-              objectFit={isMobile ? 'contain' : 'cover'} // Set objectFit based on screen size
-              quality={100}
-              priority
-            />
+            <Box
+              sx={{
+                width: '100%', // Full width for the image container
+                position: 'relative',
+                paddingTop: '56.25%', // This maintains a 16:9 aspect ratio
+              }}
+            >
+              <Image
+                src={image.imgPath}
+                alt={image.label}
+                layout="fill"
+                objectFit="cover"
+                quality={100}
+                priority
+              />
+            </Box>
           </Box>
         ))}
       </Slider>

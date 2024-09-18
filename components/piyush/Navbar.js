@@ -67,7 +67,7 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="static" style={{ backgroundColor: '#f27c21' }}>
+    <AppBar position="static" style={{ backgroundColor: '#f27c21'}}>
       <Toolbar>
         {/* For Desktop view */}
         {!isMobile && (
