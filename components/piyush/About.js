@@ -1,7 +1,6 @@
-import QuickView from '@/components/piyush/QuickView';
-import QuoteSection from '@/components/piyush/QuoteSection';
 import { Grid, Box, Typography, Button } from '@mui/material';
 import Image from 'next/image';
+import QuoteSection from './QuoteSection';
 
 export default function About() {
   return (
@@ -47,7 +46,7 @@ export default function About() {
 
           {/* Content Box */}
           <Grid item xs={12} sm={7}>
-            <Box sx={{ ml: { sm: '22px' }, textAlign: { xs: 'center', sm: 'left' } }}>
+            <Box sx={{ ml: { sm: '20px' }, textAlign: { xs: 'center', sm: 'left' } }}>
               <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#E17000' }}>
                 About
               </Typography>
@@ -96,7 +95,6 @@ export default function About() {
         </Grid>
       </Box>
       <QuoteSection />
-      <QuickView />
     </Box>
   );
 }
