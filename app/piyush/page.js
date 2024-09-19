@@ -6,6 +6,8 @@ import CarouselComponent from "@/components/piyush/Carousel";
 import { Box, Typography } from "@mui/material";
 import React, { useState } from "react";
 import About from "../about/page";
+import Achievements from "@/components/piyush/Achievments";
+import Vision from "@/components/piyush/Vision";
 
 
 
@@ -17,6 +19,8 @@ const Home = () => {
             <Navbar />
             <CarouselComponent />
             <About />
+            <Achievements />
+            <Vision />
         </Box>
     )
 }

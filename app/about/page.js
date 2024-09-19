@@ -1,3 +1,4 @@
+import JourneyBanner from '@/components/piyush/JourneyBanner';
 import QuickView from '@/components/piyush/QuickView';
 import QuoteSection from '@/components/piyush/QuoteSection';
 import { Grid, Box, Typography, Button } from '@mui/material';
@@ -97,6 +98,7 @@ export default function About() {
       </Box>
       <QuoteSection />
       <QuickView />
+      <JourneyBanner />
     </Box>
   );
 }
