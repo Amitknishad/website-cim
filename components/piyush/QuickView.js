@@ -28,15 +28,16 @@ const OrangeLine = styled('div')(({ theme }) => ({
 
 export default function QuickView() {
     const isMobile = useMediaQuery('(max-width: 600px)'); // Mobile responsive check
+    const isTablet = useMediaQuery('(min-width: 600px) and (max-width: 900px)'); // Tablet responsive check
 
     // Slider settings for the carousel
     const settings = {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: isMobile ? 2 : 5, // Shows 1 video on mobile, 3 on desktop
+        slidesToShow: isMobile ? 2 : isTablet ? 3 : 5, // Show 1 video on mobile, 3 on tablet, 5 on desktop
         slidesToScroll: 1,
-        autoplay: true, // No autoplay
+        autoplay: false, // No autoplay
         arrows: false, // No arrows for navigation
         centerMode: true,
         centerPadding: isMobile ? '20px' : '40px',
@@ -78,11 +79,10 @@ export default function QuickView() {
                 />
             </Box>
 
-
             {/* Slider for videos */}
             <Slider {...settings}>
                 {items.map((item, index) => (
-                    <VideoCard key={index} video={item.video} title={item.title} isMobile={isMobile} />
+                    <VideoCard key={index} video={item.video} title={item.title} isMobile={isMobile} isTablet={isTablet} />
                 ))}
             </Slider>
         </Box>
@@ -90,7 +90,7 @@ export default function QuickView() {
 }
 
 // VideoCard Component to handle the individual video cards
-function VideoCard({ video, title, isMobile }) {
+function VideoCard({ video, title, isMobile, isTablet }) {
     const [isPlaying, setIsPlaying] = useState(false); // Track if video is playing
     const videoRef = React.useRef(null);
 
@@ -120,8 +120,8 @@ function VideoCard({ video, title, isMobile }) {
                     src={video}
                     title={title}
                     style={{
-                        width: isMobile ? '240px' : '300px', // Narrow width for vertical reel style
-                        height: isMobile ? '300px' : '400px', // Tall height for reel look
+                        width: isMobile ? '240px' : isTablet ? '260px' : '300px',  // Dynamic width: narrow for mobile/tablet
+                        height: isMobile ? '300px' : isTablet ? '330px' : '350px',  // Dynamic height for a reel look
                         objectFit: 'cover',
                         borderRadius: '12px',
                         display: 'block',
@@ -137,11 +137,10 @@ function VideoCard({ video, title, isMobile }) {
                         top: '50%',
                         left: '50%',
                         transform: 'translate(-50%, -50%)',
-                        // backgroundColor: 'rgba(0, 0, 0, 0.5)', // Slightly transparent background
                         color: 'white',
                         zIndex: 1,
                         '&:hover': {
-                            backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                            backgroundColor: 'rgba(0, 0, 0, 0.4)',
                         },
                     }}
                 >
