@@ -53,7 +53,12 @@ export default function QuickView() {
                         fontWeight: 'bold',
                         marginRight: '10px',
                         color: '#f27c21',
-                        fontSize: '40px',
+                        fontSize: {
+                            xs: '24px',  // Small screens (mobile)
+                            sm: '30px',  // Medium screens (tablets)
+                            md: '35px',  // Large screens (laptops)
+                            lg: '40px',  // Extra-large screens (desktops)
+                        },
                     }}
                 >
                     Quick View
