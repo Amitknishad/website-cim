@@ -32,23 +32,23 @@ import 'slick-carousel/slick/slick-theme.css';
 const images = [
   {
     label: 'Image 1',
-    imgPath: '/carousel1.jpg',
+    imgPath: '/piyush1.jpeg',
   },
   {
     label: 'Image 2',
-    imgPath: '/carousel2.jpg',
+    imgPath: '/piyush2.jpeg',
   },
   {
     label: 'Image 3',
-    imgPath: '/carousel3.jpg',
+    imgPath: '/piyush3.jpeg',
   },
   {
     label: 'Image 4',
-    imgPath: '/carousel4.jpg',
+    imgPath: '/piyush4.jpeg',
   },
   {
     label: 'Image 5',
-    imgPath: '/carousel5.jpg',
+    imgPath: '/piyush5.jpeg',
   },
 ];
 
