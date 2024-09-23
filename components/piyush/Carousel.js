@@ -32,7 +32,7 @@ import 'slick-carousel/slick/slick-theme.css';
 const images = [
   {
     label: 'Image 1',
-    imgPath: '/piyush1.jpeg',
+    imgPath: '/clickableBanner.jpeg',
   },
   {
     label: 'Image 2',

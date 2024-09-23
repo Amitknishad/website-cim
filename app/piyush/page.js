@@ -8,6 +8,10 @@ import React, { useState } from "react";
 import About from "../about/page";
 import Achievements from "@/components/piyush/Achievments";
 import Vision from "@/components/piyush/Vision";
+import QuoteSection from "@/components/piyush/QuoteSection";
+import JourneyBanner from "@/components/piyush/JourneyBanner";
+import QuickView from "@/components/piyush/QuickView";
+import LatestNews from "@/components/piyush/LatestNews";
 
 
 
@@ -18,9 +22,13 @@ const Home = () => {
             <Header />
             <Navbar />
             <CarouselComponent />
-            <About />
-            <Achievements />
             <Vision />
+            <Achievements />
+            <QuoteSection />
+            <JourneyBanner />
+            <QuickView />
+            {/* <About /> */}
+            <LatestNews />
         </Box>
     )
 }

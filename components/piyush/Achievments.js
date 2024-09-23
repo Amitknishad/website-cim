@@ -182,7 +182,7 @@ export default function Home() {
   };
 
   return (
-    <Box sx={{ backgroundColor: "white", padding: 4 }}>
+    <Box sx={{ backgroundColor: "white", px: 4, pb:4, pt:2 }}>
       <HeaderWithLine heading="Achievements" />
 
       {/* Adjusting the Grid system */}
@@ -271,6 +271,9 @@ export default function Home() {
                         width: 30,
                         height: 30,
                         boxShadow: '0px 4px 10px rgba(0,0,0,0.3)',
+                        '&:hover': {
+                          color:"#ff5722",
+                        }
                       }}
                     >
                       <CloseIcon />

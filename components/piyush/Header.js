@@ -13,7 +13,7 @@ const Header = () => {
       container
       alignItems="center"
       justifyContent="space-between"
-      sx={{ px: 5, py: 2,  backgroundColor: 'white' }}  // Set background color to white
+      sx={{ px: 2, py: 2,  backgroundColor: 'white' }}  // Set background color to white
     >
       {/* Left Side: Image and Title */}
       <Grid item xs={12} md={6} container alignItems="center" sx={{ display: 'flex' }}>
