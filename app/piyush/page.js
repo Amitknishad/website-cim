@@ -11,8 +11,9 @@ import Vision from "@/components/piyush/Vision";
 import QuoteSection from "@/components/piyush/QuoteSection";
 import JourneyBanner from "@/components/piyush/JourneyBanner";
 import QuickView from "@/components/piyush/QuickView";
-import LatestNews from "@/components/piyush/LatestNews";
-
+import LatestNews from "@/components/piyush/NewsList";
+import GallerySection from "@/components/piyush/GallerySections";
+import Footer from "@/components/piyush/FooterSection";
 
 
 const Home = () => {
@@ -22,13 +23,15 @@ const Home = () => {
             <Header />
             <Navbar />
             <CarouselComponent />
+            <LatestNews />
             <Vision />
             <Achievements />
             <QuoteSection />
             <JourneyBanner />
             <QuickView />
+            <GallerySection />
+            <Footer />
             {/* <About /> */}
-            <LatestNews />
         </Box>
     )
 }
