@@ -9,11 +9,11 @@ const theme = createTheme({
 		mode: 'light',
 		divider : colorPrimary[100],
 		primary: {
-			main: colorPrimary[700],
+			main: colorPrimary[900],
 			contrastText: "#fff"
 		},
 		secondary: {
-			main: colorPrimary['A500'],
+			main: colorPrimary['A900'],
 			contrastText: "#fff"
 		},
 		error: {

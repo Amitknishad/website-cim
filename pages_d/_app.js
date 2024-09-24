@@ -1,4 +1,3 @@
-
 import { AppProps } from 'next/app'
 
 // The Component prop is the active page, so whenever you navigate between routes, Component will change to the new page. 
