@@ -167,7 +167,7 @@ function CarouselComponent() {
           justifyContent: 'space-around',
           alignItems: 'center',
           position: 'relative',
-          marginTop: '-30px', // Overlap effect
+          marginTop: '30px', // Overlap effect
           zIndex: 2,
           flexDirection: isMobile ? 'column' : 'row', // Stack vertically on mobile
           padding: isMobile ? '20px 0' : '0 30px',

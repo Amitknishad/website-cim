@@ -1,11 +1,11 @@
-// pages/index.js
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Box, Tabs, Tab, Typography, Grid, Card, CardMedia, CardContent } from '@mui/material';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from 'next/image'; // For images in next.js
 
-// Dummy data for Videos, Images, and Live streams
+// Dummy data
 const videoData = [
   {
     title: "My 100-day report card for North Mumbai #100DaysOfModi3",
@@ -15,11 +15,11 @@ const videoData = [
     videoUrl: "https://www.youtube.com/embed/-y5KcWXpdKE?si=MI_oQtuOnvSCYvax"
   },
   {
-    title: "Asian Champions 2024: हर देशवासी...",
+    title: "My 100-day report card for North Mumbai #100DaysOfModi3",
     date: "September 17, 2024",
-    duration: "00:13",
-    image: "/static/video-thumbnail2.jpg",
-    videoUrl: "https://www.youtube.com/embed/live_stream?channel=UC8butISFwT-Wl7EV0hUK0BQ"
+    duration: "03:04",
+    image: "/static/video-thumbnail1.jpg",
+    videoUrl: "https://www.youtube.com/embed/-y5KcWXpdKE?si=MI_oQtuOnvSCYvax"
   },
   {
     title: "My 100-day report card for North Mumbai #100DaysOfModi3",
@@ -29,29 +29,38 @@ const videoData = [
     videoUrl: "https://www.youtube.com/embed/-y5KcWXpdKE?si=MI_oQtuOnvSCYvax"
   },
   {
-    title: "Asian Champions 2024: हर देशवासी...",
+    title: "My 100-day report card for North Mumbai #100DaysOfModi3",
     date: "September 17, 2024",
-    duration: "00:13",
-    image: "/static/video-thumbnail2.jpg",
-    videoUrl: "https://www.youtube.com/embed/live_stream?channel=UC8butISFwT-Wl7EV0hUK0BQ"
+    duration: "03:04",
+    image: "/static/video-thumbnail1.jpg",
+    videoUrl: "https://www.youtube.com/embed/-y5KcWXpdKE?si=MI_oQtuOnvSCYvax"
   },
-  // Add more video data here
+  {
+    title: "My 100-day report card for North Mumbai #100DaysOfModi3",
+    date: "September 17, 2024",
+    duration: "03:04",
+    image: "/static/video-thumbnail1.jpg",
+    videoUrl: "https://www.youtube.com/embed/-y5KcWXpdKE?si=MI_oQtuOnvSCYvax"
+  },
+  {
+    title: "My 100-day report card for North Mumbai #100DaysOfModi3",
+    date: "September 17, 2024",
+    duration: "03:04",
+    image: "/static/video-thumbnail1.jpg",
+    videoUrl: "https://www.youtube.com/embed/-y5KcWXpdKE?si=MI_oQtuOnvSCYvax"
+  },
+  // more data...
 ];
-
 const imageData = [
-  {
-    title: "Dummy Image 1",
-    date: "September 17, 2024",
-    imageUrl: "/static/dummy-image1.jpg",
-  },
-  {
-    title: "Dummy Image 2",
-    date: "September 18, 2024",
-    imageUrl: "/static/dummy-image2.jpg",
-  },
-  // Add more image data here
-];
+  { title: "Dummy Image 1", date: "September 17, 2024", imageUrl: "/piyush1.jpeg" },
+  { title: "Dummy Image 1", date: "September 17, 2024", imageUrl: "/piyush1.jpeg" },
+  { title: "Dummy Image 1", date: "September 17, 2024", imageUrl: "/piyush1.jpeg" },
+  { title: "Dummy Image 1", date: "September 17, 2024", imageUrl: "/piyush1.jpeg" },
+  { title: "Dummy Image 1", date: "September 17, 2024", imageUrl: "/piyush1.jpeg" },
+  { title: "Dummy Image 1", date: "September 17, 2024", imageUrl: "/piyush1.jpeg" },
 
+  // more data...
+];
 const liveData = [
   {
     title: "Live Stream 1",
@@ -59,20 +68,17 @@ const liveData = [
     imageUrl: "/static/live-thumbnail1.jpg",
     liveUrl: "https://www.youtube.com/embed/live_stream?channel=UC8butISFwT-Wl7EV0hUK0BQ"
   },
-  {
-    title: "Live Stream 2",
-    date: "September 20, 2024",
-    imageUrl: "/static/live-thumbnail2.jpg",
-    liveUrl: "https://www.youtube.com/embed/live_stream?channel=UC8butISFwT-Wl7EV0hUK0BQ"
-  },
-  // Add more live data here
+  // more data...
 ];
 
 export default function GallerySection() {
   const [tabValue, setTabValue] = useState(0);
+  const [playingVideoIndex, setPlayingVideoIndex] = useState(null); // To track playing video iframe index
+  const iframeRefs = useRef([]); // Track iframe refs to stop them
 
   const handleTabChange = (event, newValue) => {
     setTabValue(newValue);
+    stopAllVideos();
   };
 
   const getDataForTab = () => {
@@ -80,6 +86,23 @@ export default function GallerySection() {
     if (tabValue === 1) return imageData;
     if (tabValue === 2) return liveData;
     return [];
+  };
+
+  const stopAllVideos = () => {
+    // Stop all iframe videos
+    iframeRefs.current.forEach((iframe) => {
+      if (iframe && iframe.contentWindow) {
+        iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+      }
+    });
+    setPlayingVideoIndex(null);
+  };
+
+  const handleVideoPlay = (index) => {
+    if (playingVideoIndex !== index) {
+      stopAllVideos(); // Stop the previous video before playing a new one
+      setPlayingVideoIndex(index);
+    }
   };
 
   const currentData = getDataForTab();
@@ -91,10 +114,41 @@ export default function GallerySection() {
     dots: false,
     infinite: false,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 3, // Show 3 items
     slidesToScroll: 1,
     vertical: true,
     verticalSwiping: true,
+    adaptiveHeight: false // Disable adaptive height to fix the height issue
+  };
+
+  const renderCardMedia = (item, index, isMain = false) => {
+    if (tabValue === 0 || tabValue === 2) {
+      const url = tabValue === 0 ? item.videoUrl : item.liveUrl;
+      return (
+        <CardMedia
+          component="iframe"
+          src={url}
+          title={item.title}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          sx={{ height: isMain ? 400 : 120 }} // Control height for main vs. right-side video
+          ref={(el) => {
+            if (el) iframeRefs.current[index] = el;
+          }}
+          onLoad={() => handleVideoPlay(index)}
+        />
+      );
+    } else if (tabValue === 1) {
+      return (
+        <Image
+          src={item.imageUrl}
+          alt={item.title}
+          layout="fill"
+          objectFit="cover"
+        />
+      );
+    }
   };
 
   return (
@@ -109,12 +163,7 @@ export default function GallerySection() {
             fontWeight: 'bold',
             marginRight: '10px',
             color: '#f27c21',
-            fontSize: {
-              xs: '24px',
-              sm: '30px',
-              md: '35px',
-              lg: '40px',
-            },
+            fontSize: { xs: '24px', sm: '30px', md: '35px', lg: '40px' },
           }}
         >
           Gallery Sections
@@ -130,39 +179,10 @@ export default function GallerySection() {
       <Box mt={3}>
         {currentData.length > 0 && (
           <Grid container spacing={3}>
-            {/* Main item section */}
+            {/* Main item (left side) */}
             <Grid item xs={12} md={8}>
-              <Card>
-                {tabValue === 0 && (
-                  <CardMedia
-                    component="iframe"
-                    src={mainItem.videoUrl}
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    sx={{ height: 400 }}
-                  />
-                )}
-                {tabValue === 1 && (
-                  <CardMedia
-                    component="img"
-                    image={mainItem.imageUrl}
-                    title="Main Image"
-                    sx={{ height: 400 }}
-                  />
-                )}
-                {tabValue === 2 && (
-                  <CardMedia
-                    component="iframe"
-                    src={mainItem.liveUrl}
-                    title="Live video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    sx={{ height: 400 }}
-                  />
-                )}
+              <Card sx={{ width: "100%", height: "auto" }}> {/* Adjust width and height to fit the container */}
+                {renderCardMedia(mainItem, 0, true)}
                 <CardContent>
                   <Typography variant="body1" color="textSecondary">
                     {mainItem.title}
@@ -171,23 +191,31 @@ export default function GallerySection() {
               </Card>
             </Grid>
 
-            {/* Right section with vertical scrolling */}
+            {/* Right section with vertical slick slider */}
             <Grid item xs={12} md={4}>
-              <Box sx={{ maxHeight: 400, overflow: 'hidden' }}>
+              <Box 
+                sx={{ 
+                  maxHeight: 400, 
+                  overflowY: 'hidden', // Hide the scroll bar
+                  overflowX: 'hidden', 
+                  '&:hover': { 
+                    overflowY: 'auto' // Show scroll on hover
+                  } 
+                }} 
+              > 
+                {/* Fix the max height and make scroll hidden by default */}
                 <Slider {...sliderSettings}>
                   {restItems.map((item, index) => (
-                    <Card key={index} sx={{ mb: 2 }}>
+                    <Card key={index + 1} sx={{ mb: 2 }}>
                       <Grid container spacing={2}>
                         <Grid item xs={6}>
-                          <CardMedia
-                            component="img"
-                            image={item.imageUrl || item.image}
-                            alt={item.title}
-                          />
+                          {renderCardMedia(item, index + 1)}
                         </Grid>
                         <Grid item xs={6}>
                           <CardContent>
-                            <Typography variant="body2" color="textSecondary">{item.date}</Typography>
+                            <Typography variant="body2" color="textSecondary">
+                              {item.date}
+                            </Typography>
                             <Typography variant="subtitle2">{item.title}</Typography>
                           </CardContent>
                         </Grid>
@@ -195,7 +223,6 @@ export default function GallerySection() {
                     </Card>
                   ))}
                 </Slider>
-                {/* More View */}
                 <Typography variant="body2" color="primary" align="right" sx={{ mt: 2 }}>
                   More View
                 </Typography>

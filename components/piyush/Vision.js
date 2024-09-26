@@ -1,5 +1,7 @@
-import { Box, Grid, Card, CardMedia, CardContent, Typography, Button } from '@mui/material';
+import React from 'react';
+import { Box, Card, CardMedia, CardContent, Typography, Button } from '@mui/material';
 import { styled } from '@mui/system';
+import Slider from 'react-slick';
 
 // Header Component (reuse your header code here)
 const OrangeLine = styled('div')(({ theme }) => ({
@@ -65,8 +67,32 @@ const VisionSection = () => {
         },
     ];
 
+    const sliderSettings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024, // Tablets and smaller screens
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 600, // Mobile
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
+    };
+
     return (
-        <Box p={4} sx={{ overflow: 'hidden', backgroundColor:"white" }}> {/* Prevents unwanted scrolling */}
+        <Box p={4} sx={{ overflow: 'hidden', backgroundColor: 'white' }}> {/* Prevents unwanted scrolling */}
             {/* Vision Title */}
             <Header heading="Vision" />
 
@@ -89,23 +115,26 @@ const VisionSection = () => {
                 economic development, infrastructure modernization, and digital empowerment. His focus areas include:
             </Typography>
 
-            {/* Grid for Vision Areas */}
-            <Grid container spacing={0} sx={{ mb: 4 }}> {/* Remove spacing between items */}
+            {/* React Slick Slider for Vision Areas */}
+            <Slider {...sliderSettings} style={{ padding: '0', margin: '0' }}>
                 {items.map((item, index) => (
-                    <Grid item xs={12} sm={6} md={3} key={index}>
-                        <Card sx={{ position: 'relative', boxShadow: 'none', borderRadius: 0 }}>
+                    <Box key={index} sx={{ padding: '0', margin: '0' }}> {/* Removed px (padding) to eliminate space between items */}
+                        <Card sx={{ position: 'relative', boxShadow: 'none', borderRadius: 0, margin: '0' }}>
                             <CardMedia
                                 component="img"
                                 image={item.image}
                                 alt={item.title}
                                 sx={{
                                     height: {
-                                        xs: '200px', // Small screens
-                                        sm: '300px', // Medium screens
-                                        md: '400px', // Large screens
-                                        lg: '65vh',  // Height relative to viewport height
+                                        xs: '450px', // Increased height for small screens
+                                        sm: '500px', // Medium screens
+                                        md: '550px', // Large screens
+                                        lg: '80vh',  // Height relative to viewport height
                                     },
+                                    width: '100%', // Full width for each image to remove space
                                     filter: 'brightness(0.7)', // Darkens the image for better text visibility
+                                    margin: '0', // No margin to remove spacing
+                                    padding: '0', // No padding to remove spacing
                                 }}
                             />
                             <CardContent
@@ -114,9 +143,8 @@ const VisionSection = () => {
                                     bottom: 0,
                                     left: 0,
                                     right: 0,
-                                    // backgroundColor: 'rgba(0, 0, 0, 0.5)', // Dark overlay behind text
                                     color: 'white',
-                                    textAlign:"center"
+                                    textAlign: 'center',
                                 }}
                             >
                                 <Typography variant="h6">{item.title}</Typography>
@@ -136,9 +164,9 @@ const VisionSection = () => {
                                 </Button>
                             </CardContent>
                         </Card>
-                    </Grid>
+                    </Box>
                 ))}
-            </Grid>
+            </Slider>
         </Box>
     );
 };
