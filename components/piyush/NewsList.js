@@ -108,7 +108,7 @@ const NewsList = () => {
                             </Box>
                         ) : (
                             <Box textAlign="right" mt={4}>
-                                <Link href="/more-news" passHref>
+                                <Link href="/more-news" passHref legacyBehavior>
                                     <Button variant="outlined">View All News</Button>
                                 </Link>
                             </Box>

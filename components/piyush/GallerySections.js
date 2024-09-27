@@ -140,16 +140,20 @@ export default function GallerySection() {
         />
       );
     } else if (tabValue === 1) {
+      // Handle Images
       return (
-        <Image
-          src={item.imageUrl}
-          alt={item.title}
-          layout="fill"
-          objectFit="cover"
-        />
+        <Box sx={{ position: "relative", height: isMain ? 400 : 120, width: "100%" }}>
+          <Image
+            src={item.imageUrl}
+            alt={item.title}
+            layout="fill"
+            objectFit="cover" // Change from "cover" to "contain" to fit the image inside the container
+          />
+        </Box>
       );
     }
   };
+
 
   return (
     <Box sx={{ backgroundColor: "white", p: 4 }}>
@@ -168,10 +172,34 @@ export default function GallerySection() {
         >
           Gallery Sections
         </Typography>
-        <Tabs value={tabValue} onChange={handleTabChange} centered sx={{ pr: 2 }}>
-          <Tab label="Videos" />
-          <Tab label="Images" />
-          <Tab label="Live" />
+        <Tabs value={tabValue} onChange={handleTabChange} centered>
+          <Tab label="Videos" sx={{
+            border: "1px solid #f27c21",
+            backgroundColor: tabValue === 0 ? '#f27c21' : 'white',
+            color: tabValue === 0 ? 'white' : '#f27c21',
+            '&.Mui-selected': {
+              backgroundColor: '#f27c21',  // Ensures the background color is orange when selected
+              color: 'white'  // Ensures the text color is white when selected
+            }
+          }} />
+          <Tab label="Images" sx={{
+            border: "1px solid #f27c21",
+            backgroundColor: tabValue === 1 ? '#f27c21' : 'white',
+            color: tabValue === 1 ? 'white' : '#f27c21',
+            '&.Mui-selected': {
+              backgroundColor: '#f27c21',  // Ensures the background color is orange when selected
+              color: 'white'  // Ensures the text color is white when selected
+            }
+          }} />
+          <Tab label="Live" sx={{
+            border: "1px solid #f27c21",
+            backgroundColor: tabValue === 2 ? '#f27c21' : 'white',
+            color: tabValue === 2 ? 'white' : '#f27c21',
+            '&.Mui-selected': {
+              backgroundColor: '#f27c21',  // Ensures the background color is orange when selected
+              color: 'white'  // Ensures the text color is white when selected
+            }
+          }} />
         </Tabs>
       </Box>
 
@@ -193,18 +221,19 @@ export default function GallerySection() {
 
             {/* Right section with vertical slick slider */}
             <Grid item xs={12} md={4}>
-              <Box 
-                sx={{ 
-                  maxHeight: 400, 
-                  overflowY: 'hidden', // Hide the scroll bar
-                  overflowX: 'hidden', 
-                  '&:hover': { 
-                    overflowY: 'auto' // Show scroll on hover
-                  } 
-                }} 
-              > 
-                {/* Fix the max height and make scroll hidden by default */}
-                <Slider {...sliderSettings}>
+              <Box
+                sx={{
+                  maxHeight: 400,
+                  display: 'flex',  // Ensure content remains in column layout
+                  flexDirection: 'column',
+                  minHeight: 400,   // Set a minimum height to prevent layout shift
+                  '& .slick-track': { // Ensure the slick slider's inner elements also respect vertical layout
+                    display: 'flex',
+                    flexDirection: 'column'
+                  }
+                }}
+              >
+                <Slider key={tabValue} {...sliderSettings}>
                   {restItems.map((item, index) => (
                     <Card key={index + 1} sx={{ mb: 2 }}>
                       <Grid container spacing={2}>
@@ -223,11 +252,12 @@ export default function GallerySection() {
                     </Card>
                   ))}
                 </Slider>
-                <Typography variant="body2" color="primary" align="right" sx={{ mt: 2 }}>
+                <Typography variant="body2" color="#f27c21" align="right" sx={{ mt: 2, textDecoration: "underline", pb:4 }}>
                   More View
                 </Typography>
               </Box>
             </Grid>
+
           </Grid>
         )}
       </Box>
