@@ -252,7 +252,7 @@ export default function GallerySection() {
                     </Card>
                   ))}
                 </Slider>
-                <Typography variant="body2" color="#f27c21" align="right" sx={{ mt: 2, textDecoration: "underline" }}>
+                <Typography variant="body2" color="#f27c21" align="right" sx={{ mt: 2, textDecoration: "underline", pb:4 }}>
                   More View
                 </Typography>
               </Box>
