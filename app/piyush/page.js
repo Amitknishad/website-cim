@@ -29,7 +29,7 @@ const Home = () => {
             <Vision />
             <Achievements />
             <QuoteSection />
-            <JourneyBanner />
+            {/* <JourneyBanner /> */}
             <QuickView />
             <GallerySection />
             <InternationalCoverageSection/>
