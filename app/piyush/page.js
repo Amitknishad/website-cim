@@ -14,6 +14,7 @@ import QuickView from "@/components/piyush/QuickView";
 import LatestNews from "@/components/piyush/NewsList";
 import GallerySection from "@/components/piyush/GallerySections";
 import Footer from "@/components/piyush/FooterSection";
+import Press from "@/components/piyush/Press"
 import InternationalCoverageSection from "../../components/piyush/InternationalCoverageSection";
 
 const Home = () => {
@@ -27,10 +28,11 @@ const Home = () => {
             <Vision />
             <Achievements />
             <QuoteSection />
-            <JourneyBanner />
+            {/* <JourneyBanner /> */}
             <QuickView />
             <GallerySection />
             <InternationalCoverageSection/>
+            <Press/>
             <Footer />
 
             {/* <About /> */}

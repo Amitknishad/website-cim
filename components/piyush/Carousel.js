@@ -36,24 +36,21 @@ import 'slick-carousel/slick/slick-theme.css';
 const images = [
   {
     label: 'Image 1',
-    imgPath: '/clickableBanner.jpeg',
+    imgPath: '/banner1.jpg',
   },
   {
     label: 'Image 2',
-    imgPath: '/piyush2.jpeg',
+    imgPath: '/banner2.jpg',
   },
   {
     label: 'Image 3',
-    imgPath: '/piyush3.jpeg',
+    imgPath: '/banner3.jpg',
   },
   {
     label: 'Image 4',
-    imgPath: '/piyush4.jpeg',
+    imgPath: '/banner4.jpg',
   },
-  {
-    label: 'Image 5',
-    imgPath: '/piyush5.jpeg',
-  },
+  
 ];
 
 // Cards Data
