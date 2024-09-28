@@ -16,7 +16,6 @@ import GallerySection from "@/components/piyush/GallerySections";
 import Footer from "@/components/piyush/FooterSection";
 import InternationalCoverageSection from "../../components/piyush/InternationalCoverageSection";
 
-
 const Home = () => {
 
     return (
