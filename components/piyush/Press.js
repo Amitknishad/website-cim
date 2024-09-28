@@ -129,7 +129,7 @@ const Press = () => {
         { title: "Article 1", date: "September 18, 2024", imgUrl: "/latestNews1.jpg", link: "/article/1" },
         { title: "Article 2", date: "September 19, 2024", imgUrl: "/latestNews2.jpg", link: "/article/2" },
         { title: "Article 1", date: "September 18, 2024", imgUrl: "/latestNews1.jpg", link: "/article/1" },
-        { title: "Article 2", date: "September 19, 2024", imgUrl: "/latestNews2.jpg", link: "/article/2" }, 
+        { title: "Article 2", date: "September 19, 2024", imgUrl: "/latestNews2.jpg", link: "/article/2" },
     ];
 
     const blogsItems = [
@@ -164,7 +164,7 @@ const Press = () => {
     const currentItems = getCurrentItems();
     const firstRowItems = currentItems.slice(0, 6);
     const secondRowItems = currentItems.slice(6, 12);
-    
+
     return (
         <Box sx={{ backgroundColor: "#fff", width: "100%", px: 4, pb: 4, pt: 2 }}>
             {/* Tabs Section */}

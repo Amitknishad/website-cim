@@ -16,6 +16,7 @@ import GallerySection from "@/components/piyush/GallerySections";
 import Footer from "@/components/piyush/FooterSection";
 import Press from "@/components/piyush/Press"
 import InternationalCoverageSection from "../../components/piyush/InternationalCoverageSection";
+import JoinCards from "../../components/piyush/JoinCards";
 
 const Home = () => {
 
@@ -24,6 +25,7 @@ const Home = () => {
             <Header />
             <Navbar />
             <CarouselComponent />
+            {/* <JoinCards /> */}
             <LatestNews />
             <Vision />
             <Achievements />
