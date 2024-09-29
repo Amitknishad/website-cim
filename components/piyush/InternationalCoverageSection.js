@@ -8,19 +8,19 @@ export default function InternationalCoverageSection() {
     const newsData = [
         {
             title: "Piyush Goyal holds bilateral meetings with counterparts on sidelines of IPEF",
-            image: "/piyush.jpeg", // Updated image path
+            image: "/international1.jpg", // Updated image path
             date: "September 17, 2024",
             category: "Top News"
         },
         {
             title: "Another bilateral meeting with key figures in Asia",
-            image: "/piyush.jpeg", // Updated image path
+            image: "/international2.jpg", // Updated image path
             date: "September 17, 2024",
             category: "Top News"
         },
         {
             title: "European counterparts engage in high-level talks",
-            image: "/piyush.jpeg", // Updated image path
+            image: "/international3.jpg", // Updated image path
             date: "September 17, 2024",
             category: "Top News"
         },

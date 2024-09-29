@@ -51,19 +51,19 @@ const VisionSection = () => {
     const items = [
         {
             title: 'Transforming India into a Global Powerhouse',
-            image: '/piyush1.jpeg', // Replace with actual image path
+            image: '/vision1.jpg', // Replace with actual image path
         },
         {
             title: 'Strengthening Infrastructure and Logistics',
-            image: '/piyush2.jpeg',
+            image: '/vision2.jpg',
         },
         {
             title: 'Ease of Doing Business',
-            image: '/piyush3.jpeg',
+            image: '/vision3.jpg',
         },
         {
             title: 'Inclusive Economic Growth',
-            image: '/piyush4.jpeg',
+            image: '/vision4.jpg',
         },
     ];
 
