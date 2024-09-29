@@ -213,8 +213,10 @@ const Press = () => {
                                     <Image
                                         src={item.imgUrl}
                                         alt={item.title}
-                                        layout="fill"
+                                        width={300}
+                                        height={150}
                                         objectFit="cover"
+                                        quality={100}  // Use a high-quality setting, 100 is max
                                         style={{ borderRadius: "5px 5px 0 0" }}
                                     />
                                 </Box>
