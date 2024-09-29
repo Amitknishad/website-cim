@@ -172,7 +172,11 @@ export default function GallerySection() {
         >
           Gallery Sections
         </Typography>
-        <Tabs value={tabValue} onChange={handleTabChange} centered>
+        <Tabs value={tabValue} onChange={handleTabChange} centered sx={{
+          '.MuiTabs-indicator': {
+            backgroundColor: 'transparent', // Remove default indicator
+          }
+        }}>
           <Tab label="Videos" sx={{
             border: "1px solid #f27c21",
             backgroundColor: tabValue === 0 ? '#f27c21' : 'white',
@@ -252,7 +256,7 @@ export default function GallerySection() {
                     </Card>
                   ))}
                 </Slider>
-                <Typography variant="body2" color="#f27c21" align="right" sx={{ mt: 2, textDecoration: "underline", pb:4 }}>
+                <Typography variant="body2" color="#f27c21" align="right" sx={{ mt: 2, textDecoration: "underline", pb: 4 }}>
                   More View
                 </Typography>
               </Box>

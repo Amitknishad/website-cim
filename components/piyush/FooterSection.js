@@ -1,5 +1,5 @@
 // components/Footer.js
-import { Grid, Typography, IconButton, Box, TextField, Button, Avatar } from '@mui/material';
+import { Grid, Typography, IconButton, Box, TextField, Button, Avatar, Container } from '@mui/material';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import YouTubeIcon from '@mui/icons-material/YouTube';
@@ -8,7 +8,9 @@ import EmailIcon from '@mui/icons-material/Email';
 
 export default function Footer() {
     return (
-        <Box component="footer" sx={{ backgroundColor: '#f37021', color: '#fff', py: 4, px: 2 }}>
+        <Box backgroundColor="white">
+        <Box component="footer" sx={{ backgroundColor: '#f37021', color: '#fff', py: 4, px: 2, borderRadius:"50px 50px 0 0" }}>
+        <Container>
             <Grid container spacing={4} justifyContent="space-between">
 
                 {/* Top Section: Image, Name, and Description */}
@@ -133,7 +135,7 @@ export default function Footer() {
                         <Box
                             sx={{
                                 width: 300,
-                                height: 120,
+                                height: 100,
                                 backgroundColor: '#fff', // White background color
                                 borderRadius: '15px', // Rounded borders
                                 padding: 2, // Add padding inside the box
@@ -141,6 +143,7 @@ export default function Footer() {
                                 flexDirection: 'column',
                                 justifyContent: 'center',
                                 boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)', // Light shadow for depth
+                                paddingBottom:3
                             }}
                         >
                             <Typography
@@ -165,7 +168,7 @@ export default function Footer() {
                                         backgroundColor: '#FEE9DC', // Light orange background
                                         borderRadius: '5px',
                                         input: { padding: '5px' }, // Adjust input padding
-                                        width: '150px'
+                                        width: '180px'
                                     }}
                                 />
                                 <Button
@@ -186,6 +189,8 @@ export default function Footer() {
                     </Grid>
                 </Grid>
             </Grid>
+            </Container>
+        </Box>
         </Box>
     );
 }
