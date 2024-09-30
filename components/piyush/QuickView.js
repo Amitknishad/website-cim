@@ -11,11 +11,11 @@ import 'slick-carousel/slick/slick-theme.css';
 
 // Video items
 const items = [
-    { video: '/quickpiyush.mp4', title: 'Event 1' },
-    { video: '/quickpiyush.mp4', title: 'Event 2' },
-    { video: '/quickpiyush.mp4', title: 'Event 3' },
-    { video: '/quickpiyush.mp4', title: 'Event 4' },
-    { video: '/quickpiyush.mp4', title: 'Event 5' },
+    { video: '/quickview1.mp4', title: 'Event 1' },
+    { video: '/quickview2.mp4', title: 'Event 2' },
+    { video: '/quickview3.mp4', title: 'Event 3' },
+    { video: '/quickview4.mp4', title: 'Event 4' },
+    { video: '/quickview5.mp4', title: 'Event 5' },
 ];
 
 // Styled Box for the orange underline

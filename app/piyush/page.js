@@ -15,6 +15,7 @@ import LatestNews from "@/components/piyush/NewsList";
 import GallerySection from "@/components/piyush/GallerySections";
 import Footer from "@/components/piyush/FooterSection";
 import Press from "@/components/piyush/Press"
+import SpeechSection from "@/components/piyush/SpeechSection"
 import InternationalCoverageSection from "../../components/piyush/InternationalCoverageSection";
 import JoinCards from "../../components/piyush/JoinCards";
 
@@ -27,6 +28,7 @@ const Home = () => {
             <CarouselComponent />
             {/* <JoinCards /> */}
             <LatestNews />
+
             <Vision />
             <Achievements />
             <QuoteSection />
@@ -35,6 +37,7 @@ const Home = () => {
             <GallerySection />
             <InternationalCoverageSection/>
             <Press/>
+            <SpeechSection/>
             <Footer />
 
             {/* <About /> */}

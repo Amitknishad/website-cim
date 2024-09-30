@@ -5,9 +5,10 @@ const HeaderWithLine = (props) => {
 
 
     // Styled Box for the orange underline
+    const widthArea=props?.widthArea || '50%';
     const OrangeLine = styled('div')(({ theme }) => ({
         borderTop: '3px solid orange',
-        width: '50%',
+        width: widthArea,
         display: 'inline-block',
         verticalAlign: 'middle',
     }));
