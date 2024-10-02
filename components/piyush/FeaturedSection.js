@@ -117,7 +117,7 @@ export default function DynamicVideoLayout() {
                   <CardMedia
                     component="img"
                     height="140"
-                    image="/piyush1.jpeg" // Replace with actual image path
+                    image="/featured1.jpg" // Replace with actual image path
                     alt="Image 1"
                   />
                   <CardContent>
@@ -137,7 +137,7 @@ export default function DynamicVideoLayout() {
                   <CardMedia
                     component="img"
                     height="140"
-                    image="/piyush2.jpeg" // Replace with actual image path
+                    image="/featured2.jpg" // Replace with actual image path
                     alt="Image 2"
                   />
                   <CardContent>
