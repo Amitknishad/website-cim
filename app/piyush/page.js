@@ -18,6 +18,7 @@ import Press from "@/components/piyush/Press"
 import SpeechSection from "@/components/piyush/SpeechSection"
 import InternationalCoverageSection from "../../components/piyush/InternationalCoverageSection";
 import JoinCards from "../../components/piyush/JoinCards";
+import FeaturedSection from "@/components/piyush/FeaturedSection";
 
 const Home = () => {
 
@@ -26,6 +27,7 @@ const Home = () => {
             <Header />
             <Navbar />
             <CarouselComponent />
+            <FeaturedSection />
             {/* <JoinCards /> */}
             <LatestNews />
 
