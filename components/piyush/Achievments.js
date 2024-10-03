@@ -194,9 +194,9 @@ export default function Home() {
               <Card
                 sx={{
                   borderRadius: "20px",
-                  color: expandedRow === index ? '#000' : '#f27c21', // Card color changes on click
+                  color: expandedRow === index ? '#000' : '#ff7e54', // Card color changes on click
                   boxShadow: 3,
-                  border: expandedRow === index ? '2px solid #f27c21' : 'none', // Highlight the clicked card
+                  border: expandedRow === index ? '2px solid #ff7e54' : 'none', // Highlight the clicked card
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'space-between', // Evenly space content inside the card
@@ -208,7 +208,7 @@ export default function Home() {
                     <Box
                       component="span"
                       sx={{
-                        backgroundColor: "#f27c21",
+                        backgroundColor: "#ff7e54",
                         color: "white",
                         borderRadius: "0 0 20px 20px",
                         padding: "8px",
@@ -224,7 +224,7 @@ export default function Home() {
                       {item.title}
                     </Typography>
                   </Box>
-                  <Typography variant="body2" color="text.secondary" style={{ fontSize: '0.875rem', color: '#f27c21' }}>
+                  <Typography variant="body2" color="text.secondary" style={{ fontSize: '0.875rem', color: '#ff7e54' }}>
                     {item.description}
                   </Typography>
                 </CardContent>
@@ -233,7 +233,7 @@ export default function Home() {
                     onClick={() => handleExpandClick(index)}
                     aria-expanded={expandedRow === index}
                     aria-label="show more"
-                    sx={{ color: "#f27c21" }}
+                    sx={{ color: "#ff7e54" }}
                   >
                     <ExpandMoreIcon />
                   </IconButton>

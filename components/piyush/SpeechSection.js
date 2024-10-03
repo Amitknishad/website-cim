@@ -88,7 +88,7 @@ export default function SpeechSection() {
                                             textAlign: 'left',
                                             background: 'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%)'
                                         }}>
-                                        <Typography variant="overline" p={0.8} color="white" backgroundColor='#f27c21' width='auto'>
+                                        <Typography variant="overline" p={0.8} color="white" backgroundColor='#ff7e54' width='auto'>
                                             {speech.category}
                                         </Typography>
                                         <Typography variant="subtitle1">
@@ -129,7 +129,7 @@ export default function SpeechSection() {
                 {/* Popular Speech Sidebar */}
                 <Grid item xs={12} md={4}>
                     <Box sx={{ borderBottom: '2px solid #f57c00', mb: 2 }}>
-                        <Typography variant="h6" gutterBottom style={{ fontWeight: 'bold', color: '#f27c21', fontSize: '28px' }}>
+                        <Typography variant="h6" gutterBottom style={{ fontWeight: 'bold', color: '#ff7e54', fontSize: '28px' }}>
                             Popular Speech
                         </Typography>
                     </Box>
@@ -137,12 +137,12 @@ export default function SpeechSection() {
                     {popularSpeeches.map((speech, index) => (
                         <Card key={speech.id} sx={{ mb: 2, p: 1, backgroundColor: '#F5F5F5' }}>
                             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                                <Typography variant='h6' sx={{ width: '70px', height: '70px', backgroundColor: '#FFE8E8', color: '#f27c21', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <Typography variant='h6' sx={{ width: '70px', height: '70px', backgroundColor: '#FFE8E8', color: '#ff7e54', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                                     {index + 1}
                                 </Typography>
                                 <CardContent>
                                     <Box sx={{ justifyContent: 'space-between', alignItems: 'center', display: 'flex' }}>
-                                        <Typography variant="body2" component='span' p={0.3} color="white" backgroundColor='#f27c21' width='auto'>
+                                        <Typography variant="body2" component='span' p={0.3} color="white" backgroundColor='#ff7e54' width='auto'>
                                             {speech.views} View
                                         </Typography>
                                         <Typography variant="caption" color="textSecondary">
@@ -160,7 +160,7 @@ export default function SpeechSection() {
                     {/* More View */}
                     <Typography
                         variant="body2"
-                        color="#f27c21"
+                        color="#ff7e54"
                         style={{ cursor: 'pointer', textAlign: 'right', textDecoration: 'underline' }}
                     >
                         More View

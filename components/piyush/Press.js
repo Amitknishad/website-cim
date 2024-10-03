@@ -169,32 +169,32 @@ const Press = () => {
         <Box sx={{ backgroundColor: "#fff", width: "100%", px: 4, pb: 4, pt: 2 }}>
             {/* Tabs Section */}
             <Tabs value={tabValue} onChange={handleTabChange} sx={{
-                borderBottom: "3px solid #f27c21",
+                borderBottom: "3px solid #ff7e54",
                 '.MuiTabs-indicator': {
                     backgroundColor: 'transparent', // Remove default indicator
                 },
             }}>
                 <Tab label="Press" sx={{
-                    backgroundColor: tabValue === 0 ? '#f27c21' : 'white',
-                    color: tabValue === 0 ? 'white' : '#f27c21',
+                    backgroundColor: tabValue === 0 ? '#ff7e54' : 'white',
+                    color: tabValue === 0 ? 'white' : '#ff7e54',
                     '&.Mui-selected': {
-                        backgroundColor: '#f27c21',
+                        backgroundColor: '#ff7e54',
                         color: 'white',
                     },
                 }} />
                 <Tab label="Articles" sx={{
-                    backgroundColor: tabValue === 1 ? '#f27c21' : 'white',
-                    color: tabValue === 1 ? 'white' : '#f27c21',
+                    backgroundColor: tabValue === 1 ? '#ff7e54' : 'white',
+                    color: tabValue === 1 ? 'white' : '#ff7e54',
                     '&.Mui-selected': {
-                        backgroundColor: '#f27c21',
+                        backgroundColor: '#ff7e54',
                         color: 'white',
                     },
                 }} />
                 <Tab label="Blog" sx={{
-                    backgroundColor: tabValue === 2 ? '#f27c21' : 'white',
-                    color: tabValue === 2 ? 'white' : '#f27c21',
+                    backgroundColor: tabValue === 2 ? '#ff7e54' : 'white',
+                    color: tabValue === 2 ? 'white' : '#ff7e54',
                     '&.Mui-selected': {
-                        backgroundColor: '#f27c21',
+                        backgroundColor: '#ff7e54',
                         color: 'white',
                     },
                 }} />
@@ -244,7 +244,7 @@ const Press = () => {
                                     <Link
                                         href={item.link}
                                         underline="hover"
-                                        sx={{ fontSize: "0.85rem", color: "#FF5733", fontWeight: 500 }}
+                                        sx={{ fontSize: "0.85rem", color: "#ff7e54", fontWeight: 500 }}
                                     >
                                         Read More
                                     </Link>
@@ -299,7 +299,7 @@ const Press = () => {
                                             <Link
                                                 href={item.link}
                                                 underline="hover"
-                                                sx={{ fontSize: "0.85rem", color: "#FF5733", fontWeight: 500 }}
+                                                sx={{ fontSize: "0.85rem", color: "#ff7e54", fontWeight: 500 }}
                                             >
                                                 Read More
                                             </Link>

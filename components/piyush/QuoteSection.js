@@ -5,14 +5,14 @@ export default function QuoteSection() {
         <Box>
             <Box
                 sx={{
-                    backgroundColor: '#fd9644',
+                    backgroundColor: '#FEA47F',
                     height: '40px', // Adjust height as needed
                 }}
             />
 
             <Box
                 sx={{
-                    backgroundColor: '#f57300', // Orange background
+                    backgroundColor: '#ff7e54', // Orange background
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',

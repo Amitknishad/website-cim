@@ -100,7 +100,7 @@ export default function DynamicVideoLayout() {
                 variant="h6"
                 sx={{
                   mt: 2,
-                  color: '#f27c21', // Title text color set to orange
+                  color: '#ff7e54', // Title text color set to orange
                   fontWeight: 'bold',
                 }}
               >
@@ -124,7 +124,7 @@ export default function DynamicVideoLayout() {
                     <Typography
                       variant="body1"
                       sx={{
-                        color: '#f27c21', // Adjust text color based on image
+                        color: '#ff7e54', // Adjust text color based on image
                         fontWeight: 'bold',
                       }}
                     >
@@ -144,7 +144,7 @@ export default function DynamicVideoLayout() {
                     <Typography
                       variant="body1"
                       sx={{
-                        color: '#f27c21', // Adjust text color based on image
+                        color: '#ff7e54', // Adjust text color based on image
                         fontWeight: 'bold',
                       }}
                     >

@@ -10,6 +10,9 @@ const newsData = [
     { title: 'New opportunities in digitalisation, trade with Australia', date: 'September 17, 2024', image: '/piyushAus.jpg', description: 'Union Minister Piyush Goyal emphasised the growing economic ties. Both sides discussed various avenues for collaboration. Key areas included digitalisation and infrastructure investment. India aims to boost...' },
     { title: 'India-Australia trade talks progress', date: 'September 16, 2024', image: '/piyushAus.jpg', description: 'Discussions on enhancing bilateral trade relations. The joint talks also explored opportunities in agriculture, mining, and clean energy. Both countries expressed...' },
     { title: 'Economic growth strategies discussed', date: 'September 15, 2024', image: '/piyushAus.jpg', description: 'Leaders from both nations focused on future economic strategies. Key sectors include digital technology, infrastructure, and clean energy initiatives. Additional resources to...' },
+    { title: 'New opportunities in digitalisation, trade with Australia', date: 'September 17, 2024', image: '/piyushAus.jpg', description: 'Union Minister Piyush Goyal emphasised the growing economic ties. Both sides discussed various avenues for collaboration. Key areas included digitalisation and infrastructure investment. India aims to boost...' },
+    { title: 'India-Australia trade talks progress', date: 'September 16, 2024', image: '/piyushAus.jpg', description: 'Discussions on enhancing bilateral trade relations. The joint talks also explored opportunities in agriculture, mining, and clean energy. Both countries expressed...' },
+    { title: 'Economic growth strategies discussed', date: 'September 15, 2024', image: '/piyushAus.jpg', description: 'Leaders from both nations focused on future economic strategies. Key sectors include digital technology, infrastructure, and clean energy initiatives. Additional resources to...' },
 ];
 
 // Sample data for upcoming events
@@ -27,7 +30,7 @@ const truncateDescription = (text) => {
 
 const NewsList = () => {
     const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 3;
+    const itemsPerPage = 6;
 
     // Calculate total pages
     const totalPages = Math.ceil(newsData.length / itemsPerPage);
@@ -40,14 +43,14 @@ const NewsList = () => {
 
     // Styled Box for the orange underline
     const OrangeLine = styled('div')(({ theme }) => ({
-        borderTop: '3px solid orange',
+        borderTop: '3px solid #ff7e54',
         width: '50%',
         display: 'inline-block',
         verticalAlign: 'middle',
     }));
 
     const OrangeLineEvents = styled('div')(({ theme }) => ({
-        borderTop: '3px solid orange',
+        borderTop: '3px solid #ff7e54',
         width: '70%',
         display: 'inline-block',
         verticalAlign: 'middle',
@@ -64,7 +67,7 @@ const NewsList = () => {
                     sx={{
                         fontWeight: 'bold',
                         marginRight: '10px',
-                        color: '#f27c21',
+                        color: '#ff7e54',
                         fontSize: {
                             xs: '24px',
                             sm: '30px',
@@ -77,11 +80,13 @@ const NewsList = () => {
                 </Typography>
                 <OrangeLine />
             </Box>
-            <Grid container spacing={4}>
+            
                 {/* Left Side: News List */}
-                <Grid item xs={12} md={8}>
-                    <Box sx={{ marginTop: 2, backgroundColor: "#FFE8E8", p: 4 }}>
-                        {paginatedNews.map((news, index) => (
+
+                <Box sx={{ marginTop: 2, backgroundColor: "#FFE8E8", p: 4 }}>
+                <Grid container spacing={4} >
+                    {paginatedNews.map((news, index) => (
+                        <Grid item xs={12} md={6}>
                             <NewsCard
                                 key={index}
                                 title={news.title}
@@ -89,42 +94,44 @@ const NewsList = () => {
                                 image={news.image}
                                 description={truncateDescription(news.description)}
                             />
-                        ))}
+                        </Grid>
+                    ))}
+                    </Grid>
 
-                        {currentPage < totalPages ? (
-                            <Box textAlign="right" mt={4}>
-                                <Link
-                                    href="#"
-                                    underline="hover"
-                                    sx={{
-                                        fontSize: "0.85rem",
-                                        color: "#f27c21",
-                                        fontWeight: 500,
-                                        textDecoration: 'underline', // This will add the underline
-                                    }}
-                                >
-                                    More View
-                                </Link>
-                            </Box>
-                        ) : (
-                            <Box textAlign="right" mt={4}>
-                                <Link href="/more-news" passHref legacyBehavior>
-                                    <Button variant="outlined">View All News</Button>
-                                </Link>
-                            </Box>
-                        )}
-                    </Box>
-                </Grid>
+                    {currentPage < totalPages ? (
+                        <Box textAlign="right" mt={4}>
+                            <Link
+                                href="#"
+                                underline="hover"
+                                sx={{
+                                    fontSize: "0.85rem",
+                                    color: "#ff7e54",
+                                    fontWeight: 500,
+                                    textDecoration: 'underline', // This will add the underline
+                                }}
+                            >
+                                More View
+                            </Link>
+                        </Box>
+                    ) : (
+                        <Box textAlign="right" mt={4}>
+                            <Link href="/more-news" passHref legacyBehavior>
+                                <Button variant="outlined">View All News</Button>
+                            </Link>
+                        </Box>
+                    )}
+                </Box>
+          
 
-                {/* Right Side: Upcoming Events */}
-                <Grid item xs={12} md={4}>
+            {/* Right Side: Upcoming Events */}
+            {/* <Grid item xs={12} md={4}>
                 <Box>
                 <Typography
                     variant="h4"
                     sx={{
                         fontWeight: 'bold',
                         marginRight: '10px',
-                        color: '#f27c21',
+                        color: '#ff7e54',
                         fontSize: {
                             xs: '24px',
                             sm: '24px',
@@ -144,7 +151,7 @@ const NewsList = () => {
                                     underline="hover"
                                     sx={{
                                         fontSize: "0.85rem",
-                                        color: "#f27c21",
+                                        color: "#ff7e54",
                                         fontWeight: 500,
                                         textDecoration: 'underline', // This will add the underline
                                     }}
@@ -152,9 +159,9 @@ const NewsList = () => {
                                     More View
                                 </Link>
                             </Box>
-                </Grid>
-            </Grid>
-        </Box>
+                </Grid> */}
+        
+        </Box >
     );
 };
 

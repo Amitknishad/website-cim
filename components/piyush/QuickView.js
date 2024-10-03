@@ -20,7 +20,7 @@ const items = [
 
 // Styled Box for the orange underline
 const OrangeLine = styled('div')(({ theme }) => ({
-    borderTop: '3px solid orange',
+    borderTop: '3px solid #ff7e54',
     width: '50%',
     display: 'inline-block',
     verticalAlign: 'middle',
@@ -53,7 +53,7 @@ export default function QuickView() {
                     sx={{
                         fontWeight: 'bold',
                         marginRight: '10px',
-                        color: '#f27c21',
+                        color: '#ff7e54',
                         fontSize: {
                             xs: '24px',  // Small screens (mobile)
                             sm: '30px',  // Medium screens (tablets)
@@ -73,7 +73,7 @@ export default function QuickView() {
                     sx={{
                         width: '10px',
                         height: '10px',
-                        backgroundColor: '#f27c21',
+                        backgroundColor: '#ff7e54',
                         borderRadius: '50%',
                     }}
                 />

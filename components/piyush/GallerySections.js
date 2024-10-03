@@ -166,7 +166,7 @@ export default function GallerySection() {
           sx={{
             fontWeight: 'bold',
             marginRight: '10px',
-            color: '#f27c21',
+            color: '#ff7e54',
             fontSize: { xs: '24px', sm: '30px', md: '35px', lg: '40px' },
           }}
         >
@@ -178,29 +178,29 @@ export default function GallerySection() {
           }
         }}>
           <Tab label="Videos" sx={{
-            border: "1px solid #f27c21",
-            backgroundColor: tabValue === 0 ? '#f27c21' : 'white',
-            color: tabValue === 0 ? 'white' : '#f27c21',
+            border: "1px solid #ff7e54",
+            backgroundColor: tabValue === 0 ? '#ff7e54' : 'white',
+            color: tabValue === 0 ? 'white' : '#ff7e54',
             '&.Mui-selected': {
-              backgroundColor: '#f27c21',  // Ensures the background color is orange when selected
+              backgroundColor: '#ff7e54',  // Ensures the background color is orange when selected
               color: 'white'  // Ensures the text color is white when selected
             }
           }} />
           <Tab label="Images" sx={{
-            border: "1px solid #f27c21",
-            backgroundColor: tabValue === 1 ? '#f27c21' : 'white',
-            color: tabValue === 1 ? 'white' : '#f27c21',
+            border: "1px solid #ff7e54",
+            backgroundColor: tabValue === 1 ? '#ff7e54' : 'white',
+            color: tabValue === 1 ? 'white' : '#ff7e54',
             '&.Mui-selected': {
-              backgroundColor: '#f27c21',  // Ensures the background color is orange when selected
+              backgroundColor: '#ff7e54',  // Ensures the background color is orange when selected
               color: 'white'  // Ensures the text color is white when selected
             }
           }} />
           <Tab label="Live" sx={{
-            border: "1px solid #f27c21",
-            backgroundColor: tabValue === 2 ? '#f27c21' : 'white',
-            color: tabValue === 2 ? 'white' : '#f27c21',
+            border: "1px solid #ff7e54",
+            backgroundColor: tabValue === 2 ? '#ff7e54' : 'white',
+            color: tabValue === 2 ? 'white' : '#ff7e54',
             '&.Mui-selected': {
-              backgroundColor: '#f27c21',  // Ensures the background color is orange when selected
+              backgroundColor: '#ff7e54',  // Ensures the background color is orange when selected
               color: 'white'  // Ensures the text color is white when selected
             }
           }} />
@@ -256,7 +256,7 @@ export default function GallerySection() {
                     </Card>
                   ))}
                 </Slider>
-                <Typography variant="body2" color="#f27c21" align="right" sx={{ mt: 2, textDecoration: "underline", pb: 4 }}>
+                <Typography variant="body2" color="#ff7e54" align="right" sx={{ mt: 2, textDecoration: "underline", pb: 4 }}>
                   More View
                 </Typography>
               </Box>

@@ -5,7 +5,7 @@ import Slider from 'react-slick';
 
 // Header Component (reuse your header code here)
 const OrangeLine = styled('div')(({ theme }) => ({
-    borderTop: '3px solid orange',
+    borderTop: '3px solid #ff7e54',
     width: '50%',
     display: 'inline-block',
     verticalAlign: 'middle',
@@ -19,7 +19,7 @@ const Header = ({ heading }) => (
             sx={{
                 fontWeight: 'bold',
                 marginRight: '10px',
-                color: '#f27c21',
+                color: '#ff7e54',
                 fontSize: {
                     xs: '24px', // Small screens (mobile)
                     sm: '30px', // Medium screens (tablets)
@@ -39,7 +39,7 @@ const Header = ({ heading }) => (
             sx={{
                 width: '10px',
                 height: '10px',
-                backgroundColor: '#f27c21',
+                backgroundColor: '#ff7e54',
                 borderRadius: '50%',
             }}
         />
@@ -100,7 +100,7 @@ const VisionSection = () => {
                 variant="body1"
                 sx={{
                     mb: 4,
-                    color: '#f27c21', // Orange text as shown in the image
+                    color: '#ff7e54', // Orange text as shown in the image
                     fontWeight: 'bold',
                     textAlign: 'left', // Left align the paragraph
                     ml: { xs: 2, md: 4 }, // Add slight margin-left to push it off-center
@@ -153,7 +153,7 @@ const VisionSection = () => {
                                     sx={{
                                         mt: 2,
                                         backgroundColor: 'white',
-                                        color: '#f27c21', // Orange text on white background
+                                        color: '#ff7e54', // Orange text on white background
                                         '&:hover': {
                                             backgroundColor: '#f27c21',
                                             color: 'white', // Hover effect

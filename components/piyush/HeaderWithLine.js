@@ -7,7 +7,7 @@ const HeaderWithLine = (props) => {
     // Styled Box for the orange underline
     const widthArea=props?.widthArea || '50%';
     const OrangeLine = styled('div')(({ theme }) => ({
-        borderTop: '3px solid orange',
+        borderTop: '3px solid #ff7e54',
         width: widthArea,
         display: 'inline-block',
         verticalAlign: 'middle',
@@ -22,7 +22,7 @@ const HeaderWithLine = (props) => {
                 sx={{
                     fontWeight: 'bold',
                     marginRight: '10px',
-                    color: '#f27c21',
+                    color: '#ff7e54',
                     fontSize: {
                         xs: '24px',  // Small screens (mobile)
                         sm: '30px',  // Medium screens (tablets)
@@ -42,7 +42,7 @@ const HeaderWithLine = (props) => {
         sx={{
             width: '10px',
             height: '10px',
-            backgroundColor: '#f27c21',
+            backgroundColor: '#ff7e54',
             borderRadius: '50%',
         }}
     />

@@ -6,7 +6,7 @@ const UpcomingEvents = ({ events }) => {
     return (
         <Box sx={{ paddingLeft: 2 }}>
             {events.map((event, index) => (
-                <Card key={index} sx={{ marginBottom: 2, backgroundColor: '#f27c21', borderRadius: 2, p: 1 }}>
+                <Card key={index} sx={{ marginBottom: 2, backgroundColor: '#ff7e54', borderRadius: 2, p: 1 }}>
                     <CardContent>
                         <Box sx={{ display: 'flex', justifyContent: 'start', alignItems: 'center', alignItems:"center", gap:"20px" }}>
                             <Typography variant="body2" color="#f27c21" sx={{ fontWeight: 'bold', paddingLeft: '10px', backgroundColor:"white", p:1, borderRadius:"0 0 15px 15px", textAlign:"center" }}>

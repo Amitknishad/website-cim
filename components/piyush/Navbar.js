@@ -104,7 +104,7 @@ const Navbar = () => {
         position={isSticky ? 'fixed' : 'static'}
         ref={navbarRef}
         style={{
-          backgroundColor: '#f27c21',
+          backgroundColor: '#ff7e54',
           top: isSticky ? 0 : 'auto',
           zIndex: theme.zIndex.drawer + 1,
           transition: 'top 0.5s ease', // Smooth transition for the navbar's position
