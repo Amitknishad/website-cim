@@ -19,6 +19,7 @@ import SpeechSection from "@/components/piyush/SpeechSection"
 import InternationalCoverageSection from "../../components/piyush/InternationalCoverageSection";
 import JoinCards from "../../components/piyush/JoinCards";
 import FeaturedSection from "@/components/piyush/FeaturedSection";
+import TimelineSection from "@/components/piyush/TimelineSection";
 
 const Home = () => {
 
@@ -35,6 +36,7 @@ const Home = () => {
             <Achievements />
             <QuoteSection />
             <JourneyBanner />
+            <TimelineSection />
             <QuickView />
             <GallerySection />
             <InternationalCoverageSection/>
