@@ -1,6 +1,9 @@
 import React, { useRef, useState } from 'react';
-import { Box, Grid, Typography, Card, CardMedia, CardContent, IconButton, Container } from '@mui/material';
+import { Box, Grid, Typography, Card, CardMedia, CardContent, IconButton, Container, styled, Link } from '@mui/material';
 import { PlayArrow, Pause, Forward10, Replay5 } from '@mui/icons-material';
+import UpcomingEvents from './UpcomingEvents'
+
+
 
 export default function DynamicVideoLayout() {
   // Reference to the video element
@@ -29,10 +32,27 @@ export default function DynamicVideoLayout() {
     videoRef.current.currentTime -= 5;
   };
 
+  const OrangeLineEvents = styled('div')(({ theme }) => ({
+    borderTop: '3px solid #ff7e54',
+    width: '70%',
+    display: 'inline-block',
+    verticalAlign: 'middle',
+    [theme.breakpoints.up('md')]: {
+      width: '100%',
+    },
+  }));
+
+  const eventData = [
+    { title: '19th India-Australia Joint', date: '23-25 Sep 2024', description: 'Discuss enhancing trade and investment relations between the two countries.' },
+    { title: 'Tech Summit 2024', date: '28-30 Oct 2024', description: 'Technology leaders from both countries to discuss digital collaboration.' },
+    { title: 'Economic Forum', date: '10-12 Nov 2024', description: 'Economic leaders meet to discuss international trade policies.' },
+  ];
+
   return (
+
     <Box sx={{ flexGrow: 1, padding: 4, backgroundColor: "white" }}>
       <Container>
-        <Grid container spacing={2}>
+        <Grid container spacing={2} mt={6}>
           {/* Left Side: Custom Video Player */}
           <Grid item xs={12} md={8}>
             <Container maxWidth="lg">
@@ -40,7 +60,7 @@ export default function DynamicVideoLayout() {
                 sx={{
                   position: 'relative',
                   width: '100%',
-                  paddingTop: '73%', // Increase height slightly
+                  paddingTop: '67.5%', // Increase height slightly
                   overflow: 'hidden',
                 }}
               >
@@ -110,7 +130,7 @@ export default function DynamicVideoLayout() {
           </Grid>
 
           {/* Right Side: Images and Titles */}
-          <Grid item xs={12} md={4}>
+          {/* <Grid item xs={12} md={4}>
             <Container maxWidth="lg">
               <Box>
                 <Card sx={{ mb: 2 }}>
@@ -154,7 +174,47 @@ export default function DynamicVideoLayout() {
                 </Card>
               </Box>
             </Container>
+          </Grid> */}
+
+          {/* Right Side: Upcoming Events */}
+          <Grid item xs={12} md={4}>
+            <Box sx={{marginTop:'-80px', marginBottom:'20px'}}>
+              <Typography
+                variant="h4"
+                sx={{
+                  fontWeight: 'bold',
+                  marginRight: '10px',
+                  color: '#ff7e54',
+                  fontSize: {
+                    xs: '24px',
+                    sm: '24px',
+                    md: '25px',
+                    lg: '30px',
+                  },
+                }}
+              >
+                Our Upcoming Events
+              </Typography>
+              <OrangeLineEvents />
+            </Box>
+            <UpcomingEvents events={eventData} />
+
+            <Box textAlign="right" mt={4}>
+              <Link
+                href="#"
+                underline="hover"
+                sx={{
+                  fontSize: "0.85rem",
+                  color: "#ff7e54",
+                  fontWeight: 500,
+                  textDecoration: 'underline', // This will add the underline
+                }}
+              >
+                More View
+              </Link>
+            </Box>
           </Grid>
+
         </Grid>
       </Container>
     </Box>

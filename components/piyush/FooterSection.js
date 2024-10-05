@@ -9,188 +9,188 @@ import EmailIcon from '@mui/icons-material/Email';
 export default function Footer() {
     return (
         <Box backgroundColor="white">
-        <Box component="footer" sx={{ backgroundColor: '#f37021', color: '#fff', py: 4, px: 2, borderRadius:"50px 50px 0 0" }}>
-        <Container>
-            <Grid container spacing={4} justifyContent="space-between">
+            <Box component="footer" sx={{ backgroundColor: '#ff7e54', color: '#fff', py: 6, px: 4, borderRadius: "50px 50px 0 0" }}>
+                <Container>
+                    <Grid container spacing={6} justifyContent="space-between">
 
-                {/* Top Section: Image, Name, and Description */}
-                <Grid item xs={12} container justifyContent={{ xs: 'center', md: 'flex-start' }} alignItems="center" direction="row" sx={{ mb: 3 }}>
-                    <Avatar
-                        src="/piyush.jpeg"
-                        alt="Piyush Goyal"
-                        sx={{ width: 80, height: 80, mb: 1 }}
-                    />
-                    <Typography variant="h6" align="start" marginLeft="20px">
-                        Piyush Goyal
-                        <Typography variant="body2" align="center">
-                            Union Commerce and Industry Minister & North Mumbai Lok Sabha MP
-                        </Typography>
-                    </Typography>
-                </Grid>
-
-                {/* Main Content Sections */}
-                <Grid container item xs={12} spacing={4} justifyContent="space-between">
-
-                    {/* Contact Us */}
-                    <Grid item xs={12} sm={6} md={2}>
-                        <Typography variant="h6" gutterBottom>
-                            Contact Us
-                        </Typography>
-                        <Box display="flex" alignItems="center" mb={1}>
-                            <LocationOnIcon sx={{ mr: 1 }} />
-                            <Typography variant="body2">
-                                8, Teen Murti Marg, New Delhi – 110 011
+                        {/* Top Section: Image, Name, and Description */}
+                        <Grid item xs={12} container justifyContent={{ xs: 'center', md: 'flex-start' }} alignItems="center" direction="row" sx={{ mb: 4 }}>
+                            <Avatar
+                                src="/piyush.jpeg"
+                                alt="Piyush Goyal"
+                                sx={{ width: 90, height: 90, mb: 1 }}
+                            />
+                            <Typography variant="h5" align="start" marginLeft="20px" textAlign={{ xs: 'center', md: 'start' }}>
+                                Piyush Goyal
+                                <Typography variant="body1" align="left" sx={{ fontSize: '16px' }}>
+                                    Union Commerce and Industry Minister & North Mumbai Lok Sabha MP
+                                </Typography>
                             </Typography>
-                        </Box>
-                        <Box display="flex" alignItems="center" mb={1}>
-                            <LocationOnIcon sx={{ mr: 1 }} />
-                            <Typography variant="body2">
-                                28, Sonnmarg, Laxmibai Jagmohandas Marg, Mumbai – 400 006
-                            </Typography>
-                        </Box>
-                        <Box display="flex" alignItems="center">
-                            <EmailIcon sx={{ mr: 1 }} />
-                            <Typography variant="body2">
-                                Email: piyush.goyal@gov.in
-                            </Typography>
-                        </Box>
-                    </Grid>
+                        </Grid>
 
-                    {/* About Section */}
-                    <Grid item xs={12} sm={6} md={2}>
-                        <Typography variant="h6" gutterBottom>
-                            About
-                        </Typography>
-                        <Typography variant="body2">Biography</Typography>
-                        <Typography variant="body2">Journey</Typography>
-                        <Typography variant="body2">Achievements</Typography>
-                    </Grid>
+                        {/* Main Content Sections */}
+                        <Grid container item xs={12} spacing={6} justifyContent="space-between">
 
-                    {/* My Views Section */}
-                    <Grid item xs={12} sm={6} md={2}>
-                        <Typography variant="h6" gutterBottom>
-                            My Views
-                        </Typography>
-                        <Typography variant="body2">Visions</Typography>
-                        <Typography variant="body2">Articles</Typography>
-                        <Typography variant="body2">Blog</Typography>
-                        <Typography variant="body2">Quotes</Typography>
-                    </Grid>
+                            {/* Contact Us */}
+                            <Grid item xs={12} sm={6} md={4}>
+                                <Typography variant="h6" gutterBottom sx={{ fontSize: '18px', fontWeight: 'bold' }}>
+                                    Contact Us
+                                </Typography>
+                                <Box display="flex" alignItems="center" mb={2}>
+                                    <LocationOnIcon sx={{ mr: 1 }} />
+                                    <Typography variant="body2" sx={{ fontSize: '16px' }}>
+                                        8, Teen Murti Marg, New Delhi – 110 011
+                                    </Typography>
+                                </Box>
+                                <Box display="flex" alignItems="center" mb={2}>
+                                    <LocationOnIcon sx={{ mr: 1 }} />
+                                    <Typography variant="body2" sx={{ fontSize: '16px' }}>
+                                        28, Sonnmarg, Laxmibai Jagmohandas Marg, Mumbai – 400 006
+                                    </Typography>
+                                </Box>
+                                <Box display="flex" alignItems="center">
+                                    <EmailIcon sx={{ mr: 1 }} />
+                                    <Typography variant="body2" sx={{ fontSize: '16px' }}>
+                                        Email: piyush.goyal@gov.in
+                                    </Typography>
+                                </Box>
+                            </Grid>
 
-                    {/* Press Section */}
-                    <Grid item xs={12} sm={6} md={2}>
-                        <Typography variant="h6" gutterBottom>
-                            Press
-                        </Typography>
-                        <Typography variant="body2">Latest news</Typography>
-                        <Typography variant="body2">Popular</Typography>
-                        <Typography variant="body2">Speeches</Typography>
-                        <Typography variant="body2">International Coverage</Typography>
-                        <Typography variant="body2">Quick Views</Typography>
-                    </Grid>
+                            {/* Quick Links Section */}
+                            <Grid item xs={12} sm={6} md={4}>
+                                <Typography variant="h6" gutterBottom sx={{ fontSize: '20px', fontWeight: 'bold' }}>
+                                    Quick Links
+                                </Typography>
+                                <Typography variant="body2" sx={{ fontSize: '16px', mb: 1 }}>About</Typography>
+                                <Typography variant="body2" sx={{ fontSize: '16px', mb: 1 }}>My Views</Typography>
+                                <Typography variant="body2" sx={{ fontSize: '16px', mb: 1 }}>Press</Typography>
+                                <Typography variant="body2" sx={{ fontSize: '16px', mb: 1 }}>Gallery</Typography>
+                                <Typography variant="body2" sx={{ fontSize: '16px', mb: 1 }}>Join us</Typography>
+                            </Grid>
 
-                    {/* Gallery Section */}
-                    <Grid item xs={12} sm={6} md={2}>
-                        <Typography variant="h6" gutterBottom>
-                            Gallery
-                        </Typography>
-                        <Typography variant="body2">Video</Typography>
-                        <Typography variant="body2">Images</Typography>
-                        <Typography variant="body2">Old Images</Typography>
-                    </Grid>
+                            {/* Social Media and Newsletter Section */}
+                            <Grid item xs={12} sm={6} md={4} display="flex" flexDirection="column" alignItems={{ xs: 'center', md: 'flex-start' }}>
 
-                    {/* Join Us */}
-                    <Grid item xs={12} sm={6} md={2}>
-                        <Typography variant="h6" gutterBottom>
-                            Join Us
-                        </Typography>
-                        <Typography variant="body2">As Member</Typography>
-                        <Typography variant="body2">As Volunteer</Typography>
-                        <Typography variant="body2">Share Your Ideas</Typography>
-                    </Grid>
-
-                </Grid>
-
-                {/* Bottom Section: Stay Connected and Newsletter */}
-                <Grid container item xs={12} spacing={2} sx={{ mt: 4 }} justifyContent="space-between">
-
-                    {/* Social Media Icons */}
-                    <Grid item xs={12} md={6} container alignItems="center" justifyContent="flex-start">
-                        <Typography variant="h6" gutterBottom>
-                            Stay Connected
-                        </Typography>
-                        <IconButton href="#" color="inherit">
-                            <InstagramIcon />
-                        </IconButton>
-                        <IconButton href="#" color="inherit">
-                            <FacebookIcon />
-                        </IconButton>
-                        <IconButton href="#" color="inherit">
-                            <YouTubeIcon />
-                        </IconButton>
-                    </Grid>
-
-                    {/* Newsletter Subscription */}
-                    <Grid item xs={12} md={6} container justifyContent="flex-end" alignItems="center">
-                        <Box
-                            sx={{
-                                width: 300,
-                                height: 100,
-                                backgroundColor: '#fff', // White background color
-                                borderRadius: '15px', // Rounded borders
-                                padding: 2, // Add padding inside the box
-                                display: 'flex',
-                                flexDirection: 'column',
-                                justifyContent: 'center',
-                                boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)', // Light shadow for depth
-                                paddingBottom:3
-                            }}
-                        >
-                            <Typography
-                                variant="subtitle1"
-                                gutterBottom
-                                sx={{ color: '#f37021', fontWeight: 'bold' }} // Orange text color
-                            >
-                                NEWS LETTER
-                            </Typography>
-                            <Typography
-                                variant="body2"
-                                sx={{ color: '#f37021', marginBottom: '5px' }} // Orange text color
-                            >
-                                Get Latest News & Update
-                            </Typography>
-                            <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                                <TextField
-                                    variant="outlined"
-                                    placeholder="E-mail"
-                                    size="small"
+                                {/* Newsletter Subscription */}
+                                <Box
                                     sx={{
-                                        backgroundColor: '#FEE9DC', // Light orange background
-                                        borderRadius: '5px',
-                                        input: { padding: '5px' }, // Adjust input padding
-                                        width: '180px'
-                                    }}
-                                />
-                                <Button
-                                    variant="contained"
-                                    sx={{
-                                        ml: 1,
-                                        backgroundColor: '#f37021', // Orange button color
-                                        color: '#fff', // White text color
-                                        borderRadius: '5px',
-                                        textTransform: 'none', // Remove uppercase style
-                                        padding: '5px'
+                                        width: { xs: '100%', sm: '320px' },
+                                        backgroundColor: '#fff',
+                                        borderRadius: '15px',
+                                        padding: 2,
+                                        mt: 3,
+                                        boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.2)',
                                     }}
                                 >
-                                    Subscribe
-                                </Button>
-                            </Box>
-                        </Box>
+                                    {/* <Typography
+                                        variant="subtitle1"
+                                        gutterBottom
+                                        sx={{ color: '#f37021', fontWeight: 'bold' }}
+                                    >
+                                        NEWSLETTER
+                                    </Typography>
+                                    <Typography
+                                        variant="body2"
+                                        sx={{ color: '#f37021', marginBottom: '8px' }}
+                                    >
+                                        Get Latest News & Update
+                                    </Typography>
+                                    <Box sx={{ display: 'flex', justifyContent: 'start', flexDirection:'row', alignItems: 'center', }}>
+                                        <TextField
+                                            variant="outlined"
+                                            placeholder="E-mail"
+                                            size="small"
+                                            sx={{
+                                                backgroundColor: '#FEE9DC',
+                                                borderRadius: '5px',
+                                                input: { padding: '6px' },
+                                                width: { xs: '60%', sm: '230px', md: '240px' },
+                                                mb: { xs: 2, sm: 0 },
+                                            }}
+                                        />
+                                        <Button
+                                            variant="contained"
+                                            sx={{
+                                                ml: { xs: 0, sm: 2 },
+                                                mt: { xs: 2, sm: 0 },
+                                                backgroundColor: '#f37021',
+                                                color: '#fff',
+                                                borderRadius: '5px',
+                                                textTransform: 'none',
+                                                padding: '5px 16px',
+                                            }}
+                                        >
+                                            Subscribe
+                                        </Button>
+                                    </Box> */}
+                                    <Typography
+                                        variant="subtitle1"
+                                        gutterBottom
+                                        sx={{ color: '#f37021', fontWeight: 'bold' }}
+                                    >
+                                        NEWS LETTER
+                                    </Typography>
+                                    <Typography
+                                        variant="body2"
+                                        sx={{ color: '#f37021', marginBottom: '8px' }}
+                                    >
+                                        Get Latest News & Update
+                                    </Typography>
+                                    <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                                        <TextField
+                                            variant="outlined"
+                                            placeholder="E-mail"
+                                            size="small"
+                                            sx={{
+                                                backgroundColor: '#FEE9DC',
+                                                borderRadius: '5px',
+                                                input: { padding: '6px' },
+                                                width: '230px'
+                                            }}
+                                        />
+                                        <Button
+                                            variant="contained"
+                                            sx={{
+                                                ml: 2,
+                                                backgroundColor: '#f37021',
+                                                color: '#fff',
+                                                borderRadius: '5px',
+                                                textTransform: 'none',
+                                                padding: '5px 16px'
+                                            }}
+                                        >
+                                            Subscribe
+                                        </Button>
+                                        </Box>
+                                </Box>
+
+                                {/* Social Media */}
+                                <Typography variant="h6" gutterBottom sx={{ fontSize: '18px', fontWeight: 'bold', mt: 3 }}>
+                                    Stay Connected
+                                </Typography>
+                                <Box>
+                                    <IconButton href="#" color="inherit" sx={{ mr: 1 }}>
+                                        <InstagramIcon fontSize="large" />
+                                    </IconButton>
+                                    <IconButton href="#" color="inherit" sx={{ mr: 1 }}>
+                                        <FacebookIcon fontSize="large" />
+                                    </IconButton>
+                                    <IconButton href="#" color="inherit" sx={{ mr: 1 }}>
+                                        <YouTubeIcon fontSize="large" />
+                                    </IconButton>
+                                </Box>
+                            </Grid>
+                        </Grid>
                     </Grid>
-                </Grid>
-            </Grid>
-            </Container>
-        </Box>
+
+                    {/* Footer Bottom Section */}
+                    <Box sx={{ mt: 4, textAlign: 'center' }}>
+                        <Typography variant="caption" sx={{ color: '#fff' }}>
+                            Copyright ©2024. All rights reserved. | <a href="/privacy-policy" style={{ color: '#fff', textDecoration: 'underline' }}>Privacy policy</a>
+                        </Typography>
+                    </Box>
+                </Container>
+            </Box>
         </Box>
     );
 }
