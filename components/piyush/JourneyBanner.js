@@ -1,126 +1,49 @@
-// components/UnionCommerceBanner.tsx
-import { Box, Typography, Grid, Paper } from '@mui/material';
-import Image from 'next/image';
+// pages/public-life.js
 
-const JourneyBanner = () => {
+import { Box, Typography } from '@mui/material';
+
+export default function PublicLife() {
   return (
     <Box
+
       sx={{
+        backgroundColor: '#FF6F3D',
+        padding: '20px',
+        borderRadius: '8px',
         display: 'flex',
-        justifyContent: 'center',
+        flexDirection: 'column',
+        justifyContent: 'start',
         alignItems: 'center',
-        height: '100vh',
-        position: 'relative',
-        backgroundColor: 'white', // Light background,
-        width:"100vw"
+        textAlign: 'start',
+        maxWidth: '600px',
+        margin: '0 auto',
+        color: '#fff',
       }}
     >
-      {/* Background Layer 1 */}
-      <Box
-        sx={{
-          position: 'absolute',
-          width: '85%',
-          height: '85%',
-          borderRadius: '80px 0 0 0',
-          backgroundColor: '#fdeacc', // Lightest orange shade
-          bottom: '0%',
-          right: '0%',
-        }}
-      />
-
-      {/* Background Layer 2 */}
-      <Box
-        sx={{
-          position: 'absolute',
-          width: '70%',
-          height: '70%',
-          borderRadius: '80px 0 0 0',
-          backgroundColor: '#fcd1a0', // Medium orange shade
-          bottom: '0%',
-          right: '0%',
-        }}
-      />
-
-      {/* Background Layer 3 */}
-      <Box
-        sx={{
-          position: 'absolute',
-          width: '55%',
-          height: '55%',
-          borderRadius: '80px 0 0 0',
-          backgroundColor: '#fd9432', // Darkest orange shade
-          bottom: '0%',
-          right: '0%',
-        }}
-      />
-
-      {/* Paper with Content */}
-      <Paper
-        elevation={3}
-        sx={{
-          width: '85%',
-          maxWidth: '1200px',
-          padding: 4,
-          position: 'relative',
-          zIndex: 1,
-          bgcolor: 'transparent', // Paper has no background to show layered background behind
-          overflow: 'hidden', // Ensures clean edges
-        }}
-      >
-        <Grid container spacing={2}>
-          {/* Left Section with Number "30" and Image */}
-          <Grid item xs={12} md={6} sx={{ position: 'relative' }}>
-            <Box
-              sx={{ fontSize: '120px', fontWeight: 'bold', color: '#fd9432' }}
-            >
-              30
-            </Box>
-            <Box sx={{ position: 'absolute', top: '50px', left: '50px' }}>
-              <Image
-                src="/piyush.jpeg" // Add your image paths accordingly
-                alt="Train and industry"
-                width={300}
-                height={300}
-              />
-            </Box>
-            <Typography
-              variant="h5"
-              sx={{ mt: 3, color: '#fd9432', fontWeight: 'bold' }}
-            >
-              Years in
-            </Typography>
-            <Typography
-              variant="h3"
-              sx={{ color: '#fd9432', fontWeight: 'bold' }}
-            >
-              Union Commerce and Industry
-            </Typography>
-          </Grid>
-
-          {/* Right Section with Person Image */}
-          <Grid
-            item
-            xs={12}
-            md={6}
-            sx={{
-              display: 'flex',
-              justifyContent: 'flex-end',
-              alignItems: 'center',
-              position: 'relative',
-            }}
-          >
-            <Image
-              src="/piyush.jpeg" // Replace with the image URL
-              alt="Person Image"
-              width={200}
-              height={300}
-              style={{ borderRadius: '50%' }}
-            />
-          </Grid>
-        </Grid>
-      </Paper>
+      <Box sx={{display:'flex', justifyContent:'start', alignItems:'center'}}>
+      <Typography variant="h1" sx={{ fontSize: '5rem', fontWeight: 'bold', margin: '0' }}>
+        30
+      </Typography>
+      <Typography variant="h4" sx={{ margin: '0', fontSize: '2rem' }}>
+        YEARS IN
+      </Typography>
+      <Typography variant="h4" sx={{ marginBottom: '20px', fontSize: '2rem' }}>
+        PUBLIC LIFE
+      </Typography>
+      </Box>
+      <Typography variant="h1" sx={{ fontSize: '5rem', fontWeight: 'bold', margin: '0' }}>
+        30
+      </Typography>
+      <Typography variant="h4" sx={{ margin: '0', fontSize: '2rem' }}>
+        YEARS IN
+      </Typography>
+      <Typography variant="h4" sx={{ marginBottom: '20px', fontSize: '2rem' }}>
+        PUBLIC LIFE
+      </Typography>
+      <Typography variant="body1" sx={{ fontSize: '1.1rem', maxWidth: '500px' }}>
+        A JOURNEY FROM BOARD OF INDIA'S LARGEST COMMERCIAL BANKS TO UNION HOME MINISTER
+        UNION COMMERCE AND INDUSTRY MINISTER & NORTH MUMBAI LOK SABHA MP
+      </Typography>
     </Box>
   );
-};
-
-export default JourneyBanner;
+}
