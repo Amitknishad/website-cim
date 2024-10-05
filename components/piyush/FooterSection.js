@@ -5,6 +5,8 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
+import XIcon from '@mui/icons-material/X';
+
 
 export default function Footer() {
     return (
@@ -174,6 +176,9 @@ export default function Footer() {
                                     </IconButton>
                                     <IconButton href="#" color="inherit" sx={{ mr: 1 }}>
                                         <FacebookIcon fontSize="large" />
+                                    </IconButton>
+                                    <IconButton href="#" color="inherit" sx={{ mr: 1 }}>
+                                        <XIcon fontSize="large" />
                                     </IconButton>
                                     <IconButton href="#" color="inherit" sx={{ mr: 1 }}>
                                         <YouTubeIcon fontSize="large" />

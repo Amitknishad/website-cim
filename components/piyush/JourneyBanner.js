@@ -17,7 +17,7 @@ export default function PublicLife() {
         color: '#fff',
       }}
     >
-      <Box sx={{ display: 'flex', justifyContent: 'start', alignItems: 'center', gap: '10px', width:"100%", marginTop:'-70px' }}>
+      <Box sx={{ display: 'flex', justifyContent: 'start', alignItems: 'center', gap: '10px', width:"100%", marginTop:{xs: '-45px', sm:'-70px'} }}>
         <Typography variant="h1" sx={{ fontSize: { xs: '6rem', sm: '12rem' }, fontWeight: 'bold', margin: '0' }}>
           30
         </Typography>

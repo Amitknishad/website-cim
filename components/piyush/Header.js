@@ -6,6 +6,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import Image from 'next/image';
+import XIcon from '@mui/icons-material/X';
 
 const Header = () => {
   return (
@@ -36,6 +37,9 @@ const Header = () => {
         </IconButton>
         <IconButton color="inherit">
           <FacebookIcon sx={{ color: '#ff7e54', fontSize: 35 }} />   {/* Increased Icon Size */}
+        </IconButton>
+        <IconButton color="inherit">
+          <XIcon sx={{ color: '#ff7e54', fontSize: 35 }} />    {/* Increased Icon Size */}
         </IconButton>
         <IconButton color="inherit">
           <YouTubeIcon sx={{ color: '#ff7e54', fontSize: 35 }} />    {/* Increased Icon Size */}
