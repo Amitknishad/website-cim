@@ -5,51 +5,52 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 
-// Styles for the Timeline Container
 const TimelineContainer = styled(Box)({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: '40px 0',  // More padding for visual balance
+    padding: '40px 0',
     backgroundColor: '#FFF7E6', // Light cream background to match the image
 });
 
-const YearLine = styled(Box)(({ theme }) => ({
+const YearLine = styled(Box)({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     position: 'relative',
     width: '100%',
-    marginBottom: '40px',  // Space between the timeline and the content
+    marginBottom: '20px',
     '&:after': {
         content: '""',
         width: '90%',
         height: '2px',
-        backgroundColor: '#FFC107', // Orange line
+        backgroundColor: '#ff7e54', // Orange line
         position: 'absolute',
         top: '50%',
         zIndex: 1,
     },
-}));
+});
 
-const YearButton = styled(Box)(({ theme }) => ({
+const YearButton = styled(Box)({
     zIndex: 2,
-    backgroundColor: '#FFC107',  // Orange color for the year button
+    backgroundColor: '#ff7e54',
     color: '#fff',
-    padding: '8px 16px',
+    width: '20px', // Adjusting size to match first image
+    height: '20px',
     borderRadius: '50%',
     fontWeight: 'bold',
     cursor: 'pointer',
-    margin: '0 10px',
+    margin: '-10px 10px 20px', // Spacing for the buttons
     fontSize: '1.2rem',
     '&:hover': {
         backgroundColor: '#FFB300',
     },
-}));
+});
 
 const TimelineYear = styled(Box)({
     textAlign: 'center',
+    margin: '0 15px', // Adjust space between year markers
 });
 
 const TimelineItem = ({ year, title, content, imageUrl }) => {
@@ -78,6 +79,8 @@ const TimelineItem = ({ year, title, content, imageUrl }) => {
     );
 };
 
+
+
 const TimelineSection = () => {
     const timelineData = [
         {
@@ -87,25 +90,23 @@ const TimelineSection = () => {
             imageUrl: '/piyush.jpeg',
         },
         {
-            year: '1964',
-            title: 'Born in Mumbai',
-            content: 'Piyush Goyal was born in Mumbai, Maharashtra...',
-            imageUrl: '/piyush.jpeg',
+            year: '1981',
+            title: 'Education',
+            content: 'Completed schooling and entered college...',
+            imageUrl: '/education.jpeg',
         },
         {
-            year: '1964',
-            title: 'Born in Mumbai',
-            content: 'Piyush Goyal was born in Mumbai, Maharashtra...',
-            imageUrl: '/piyush.jpeg',
+            year: '2001',
+            title: 'Political Entry',
+            content: 'Piyush Goyal entered politics...',
+            imageUrl: '/politics.jpeg',
         },
-       
-
         // Add more timeline items as needed
     ];
 
     return (
-        <Box sx={{padding:4, backgroundColor:"white"}}>
-            <Typography variant="h4" align="center" gutterBottom style={{ color: '#FF7043', fontWeight: 'bold', fontSize:"2.5rem" }}>
+        <Box sx={{ padding: 4, backgroundColor: "white" }}>
+            <Typography variant="h4" align="center" gutterBottom style={{ color: '#FF7043', fontWeight: 'bold', fontSize: "2.5rem" }}>
                 Timeline of Minister Piyush Goyal
             </Typography>
 
@@ -115,9 +116,14 @@ const TimelineSection = () => {
                     <IconButton aria-label="previous" style={{ position: 'absolute', left: 0 }}>
                         <ArrowBackIosIcon style={{ color: '#FF7043' }} />
                     </IconButton>
+
                     {timelineData.map((item, index) => (
-                        <YearButton key={index}>{item.year}</YearButton>
+                        <TimelineYear key={index}>
+                            <Typography style={{ marginBottom: '5px', color: '#FF7043', fontWeight: 'bold' }}>{item.year}</Typography>
+                            <YearButton></YearButton>
+                        </TimelineYear>
                     ))}
+
                     <IconButton aria-label="next" style={{ position: 'absolute', right: 0 }}>
                         <ArrowForwardIosIcon style={{ color: '#FF7043' }} />
                     </IconButton>

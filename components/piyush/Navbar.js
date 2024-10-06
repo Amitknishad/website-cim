@@ -180,8 +180,8 @@ const Navbar = () => {
                     inputProps={{ 'aria-label': 'search' }}
                   />
                 )}
-                <IconButton color="inherit" onClick={handleSearchClick}>
-                  <SearchIcon />
+                <IconButton sx={{backgroundColor:'white'}} color="inherit" onClick={handleSearchClick}>
+                  <SearchIcon sx={{color:'#ff7e54'}} />
                 </IconButton>
               </Box>
             </Box>
