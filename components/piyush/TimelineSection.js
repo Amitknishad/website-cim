@@ -16,7 +16,7 @@ const TimelineContainer = styled(Box)({
 
 const YearLine = styled(Box)({
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'start',
     alignItems: 'center',
     position: 'relative',
     width: '100%',
@@ -93,13 +93,13 @@ const TimelineSection = () => {
             year: '1981',
             title: 'Education',
             content: 'Completed schooling and entered college...',
-            imageUrl: '/education.jpeg',
+            imageUrl: '/piyush.jpeg',
         },
         {
             year: '2001',
             title: 'Political Entry',
             content: 'Piyush Goyal entered politics...',
-            imageUrl: '/politics.jpeg',
+            imageUrl: '/piyush.jpeg',
         },
         // Add more timeline items as needed
     ];
@@ -112,21 +112,21 @@ const TimelineSection = () => {
 
             <TimelineContainer>
                 {/* Year Navigation */}
-                <YearLine>
-                    <IconButton aria-label="previous" style={{ position: 'absolute', left: 0 }}>
+                <YearLine >
+                    {/* <IconButton aria-label="previous" style={{ position: 'absolute', left: 0 }}>
                         <ArrowBackIosIcon style={{ color: '#FF7043' }} />
-                    </IconButton>
+                    </IconButton> */}
 
                     {timelineData.map((item, index) => (
-                        <TimelineYear key={index}>
-                            <Typography style={{ marginBottom: '5px', color: '#FF7043', fontWeight: 'bold' }}>{item.year}</Typography>
+                        <TimelineYear key={index} sx={{padding:"30px"}}>
+                            <Typography style={{ marginBottom: '15px', color: '#FF7043', fontWeight: 'bold', fontSize:{xs:'20px', sm:"30px"} }}>{item.year}</Typography>
                             <YearButton></YearButton>
                         </TimelineYear>
                     ))}
-
+{/* 
                     <IconButton aria-label="next" style={{ position: 'absolute', right: 0 }}>
                         <ArrowForwardIosIcon style={{ color: '#FF7043' }} />
-                    </IconButton>
+                    </IconButton> */}
                 </YearLine>
 
                 {/* Timeline Content */}
