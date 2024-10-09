@@ -41,7 +41,7 @@ const YearButton = styled(Box)({
     borderRadius: '50%',
     fontWeight: 'bold',
     cursor: 'pointer',
-    margin: '-10px 10px 20px', // Spacing for the buttons
+    margin: '-15px 10px 20px', // Spacing for the buttons
     fontSize: '1.2rem',
     '&:hover': {
         backgroundColor: '#FFB300',
