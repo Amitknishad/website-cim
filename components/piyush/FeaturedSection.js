@@ -60,7 +60,7 @@ export default function DynamicVideoLayout() {
                 sx={{
                   position: 'relative',
                   width: '100%',
-                  paddingTop: '67.5%', // Increase height slightly
+                  paddingTop: '75%', // Increase height slightly
                   overflow: 'hidden',
                 }}
               >

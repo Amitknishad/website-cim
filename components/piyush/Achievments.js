@@ -182,7 +182,8 @@ export default function Home() {
   };
 
   return (
-    <Box sx={{ backgroundColor: "white", px: 4, pb:4, pt:2 }}>
+    <Box sx={{backgroundColor:'white'}}>
+    <Box sx={{ backgroundColor: "#FFE8E8", px: 4, pb:4, pt:2}}>
       <HeaderWithLine heading="Achievements" />
 
       {/* Adjusting the Grid system */}
@@ -297,5 +298,6 @@ export default function Home() {
         ))}
       </Grid>
     </Box>
+  </Box>
   );
 }

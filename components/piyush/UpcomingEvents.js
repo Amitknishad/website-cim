@@ -4,7 +4,7 @@ import { Box, Typography, Card, CardContent } from '@mui/material';
 
 const UpcomingEvents = ({ events }) => {
     return (
-        <Box sx={{ padding: 2, backgroundColor:"#FFE8E8" }}>
+        <Box sx={{ padding: 2, paddingRight:'50px', backgroundColor:"#FFE8E8" }}>
             {events.map((event, index) => (
                 <Card key={index} sx={{ marginBottom: 2, backgroundColor: '#ff7e54', borderRadius: 2, p: 1 }}>
                     <CardContent>
