@@ -23,7 +23,7 @@ const YearLine = styled(Box)({
     marginBottom: '20px',
     '&:after': {
         content: '""',
-        width: '90%',
+        width: '100%',
         height: '2px',
         backgroundColor: '#ff7e54', // Orange line
         position: 'absolute',

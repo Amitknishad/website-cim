@@ -62,7 +62,7 @@ export default function SpeechSection() {
     ];
 
     return (
-        <Box sx={{ backgroundColor: 'white', p: 4 }}>
+    <Box sx={{ backgroundColor: "#FFE8E8", p: 4 }}>
             {/* Main Section */}
             <HeaderWithLine heading='Speech' widthArea='40%' />
 

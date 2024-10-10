@@ -156,7 +156,7 @@ export default function GallerySection() {
 
 
   return (
-    <Box sx={{ backgroundColor: "white", p: 4 }}>
+    <Box sx={{ backgroundColor: "#FFE8E8", p: 4 }}>
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
         <Typography
           variant="h4"
