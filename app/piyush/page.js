@@ -33,7 +33,7 @@ const Home = () => {
             <LatestNews />
 
             <Vision />
-            <Achievements />
+            <Achievements bgColor={true} />
             <QuoteSection />
             <JourneyBanner />
             <TimelineSection />

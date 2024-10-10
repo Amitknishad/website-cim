@@ -170,7 +170,7 @@ const achievements = [
   },
 ];
 
-export default function Achievements() {
+export default function Achievements(props) {
   const [expandedRow, setExpandedRow] = useState(null);
 
   const handleExpandClick = (index) => {
@@ -183,7 +183,7 @@ export default function Achievements() {
 
   return (
     <Box sx={{backgroundColor:'white', py:4}}>
-    <Box sx={{ backgroundColor: "#FFE8E8", px: 4, pb:4, pt:2}}>
+    <Box sx={{ backgroundColor: props?.bgColor ? "#FFE8E8": "white", px: 4, pb:4, pt:2}}>
       <HeaderWithLine heading="Achievements" />
 
       {/* Adjusting the Grid system */}
