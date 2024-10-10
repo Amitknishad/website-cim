@@ -21,6 +21,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 
+
 const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
@@ -125,6 +126,15 @@ const Navbar = () => {
               <Button color="inherit">Home</Button>
 
               {/* About dropdown */}
+              <Button color="inherit" onClick={(event) => handleMenuOpen(event, 'vision')}>
+                Vision {openMenu === 'vision' ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
+              </Button>
+              <Menu anchorEl={anchorEl} open={openMenu === 'vision'} onClose={handleMenuClose}>
+                <MenuItem onClick={handleMenuClose}>Vision Option 1</MenuItem>
+                <MenuItem onClick={handleMenuClose}>Vision Option 2</MenuItem>
+              </Menu>
+
+              {/* About dropdown */}
               <Button color="inherit" onClick={(event) => handleMenuOpen(event, 'about')}>
                 About {openMenu === 'about' ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
               </Button>
@@ -180,8 +190,8 @@ const Navbar = () => {
                     inputProps={{ 'aria-label': 'search' }}
                   />
                 )}
-                <IconButton sx={{backgroundColor:'white'}} color="inherit" onClick={handleSearchClick}>
-                  <SearchIcon sx={{color:'#ff7e54'}} />
+                <IconButton sx={{ backgroundColor: 'white' }} color="inherit" onClick={handleSearchClick}>
+                  <SearchIcon sx={{ color: '#ff7e54' }} />
                 </IconButton>
               </Box>
             </Box>
@@ -211,6 +221,17 @@ const Navbar = () => {
             </Typography>
 
             <MenuItem onClick={toggleDrawer}>Home</MenuItem>
+
+            {/* About dropdown in drawer */}
+            <MenuItem onClick={() => handleDropdownToggle('vision')}>
+              Vision {dropdownOpen.vision ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
+            </MenuItem>
+            <Collapse in={dropdownOpen.vision}>
+              <Box sx={{ paddingLeft: 2 }}>
+                <MenuItem>Vision Option 1</MenuItem>
+                <MenuItem>Vision Option 2</MenuItem>
+              </Box>
+            </Collapse>
 
             {/* About dropdown in drawer */}
             <MenuItem onClick={() => handleDropdownToggle('about')}>
