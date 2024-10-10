@@ -182,7 +182,7 @@ export default function Achievements() {
   };
 
   return (
-    <Box sx={{backgroundColor:'white'}}>
+    <Box sx={{backgroundColor:'white', py:4}}>
     <Box sx={{ backgroundColor: "#FFE8E8", px: 4, pb:4, pt:2}}>
       <HeaderWithLine heading="Achievements" />
 
