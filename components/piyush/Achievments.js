@@ -170,7 +170,7 @@ const achievements = [
   },
 ];
 
-export default function Home() {
+export default function Achievements() {
   const [expandedRow, setExpandedRow] = useState(null);
 
   const handleExpandClick = (index) => {
