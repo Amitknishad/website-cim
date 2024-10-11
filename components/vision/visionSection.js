@@ -1,12 +1,127 @@
 "use client"
 import React from 'react';
-import { Grid, Typography, Box } from '@mui/material';
+import { Grid, Typography, Box, IconButton } from '@mui/material';
 import Image from 'next/image';
 import Achievements from '../piyush/Achievments';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import Slider from 'react-slick';
 
 const VisionDetails = () => {
+
+  const imageData = [
+    { src: "/piyush.jpeg", alt: "Thermal" },
+    { src: "/piyush1.jpeg", alt: "Industry" },
+    { src: "/piyush2.jpeg", alt: "Solar Energy" },
+    { src: "/piyush3.jpeg", alt: "Container Shipping" },
+    { src: "/piyush4.jpeg", alt: "Train" },
+    { src: "/piyush5.jpeg", alt: "Buildings" }
+  ];
+
+  const settings = {
+    dots: false,  // Set to true if you want dots under the carousel
+    infinite: true,
+    speed: 500,
+    slidesToShow: 6, // Number of items to show by default (for larger screens)
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1200, // Large screen size
+        settings: {
+          slidesToShow: 4, // Show 4 images
+        },
+      },
+      {
+        breakpoint: 900, // Medium screen size
+        settings: {
+          slidesToShow: 3, // Show 3 images
+        },
+      },
+      {
+        breakpoint: 600, // Small screen size
+        settings: {
+          slidesToShow: 2, // Show 2 images
+        },
+      },
+      {
+        breakpoint: 480, // Extra small screen size
+        settings: {
+          slidesToShow: 1, // Show 1 image
+        },
+      },
+    ],
+  };
+
+
   return (
     <Box sx={{ backgroundColor: "white" }}>
+
+      <Box
+        sx={{
+          position: 'relative',  // Ensures content inside can be positioned absolutely
+          paddingBottom: '2rem',
+        }}
+      >
+        {/* Centered title on top of the image with small orange background */}
+        <Box
+          sx={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',  // Centers the text
+            textAlign: 'center',
+            zIndex: 2,
+          }}
+        >
+          <Typography
+            variant="h4"
+            sx={{
+              color: '#fff',
+              fontWeight: 'bold',
+              padding: { xs: '0.2rem 0.5rem', sm: '0.5rem 1rem' }, // Padding adjusts based on screen size
+              borderRadius: '4px',
+              fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem' },  // Responsive font size
+              lineHeight: 1.2,
+            }}
+          >
+            VISION<br />AND ACHIEVEMENTS
+          </Typography>
+
+          {/* Small orange background box just below the text */}
+          <Box
+            sx={{
+              width: { xs: '100%', sm: '100%', md: '100%' },  // Responsive width based on screen size
+              height: { xs: '15px', sm: '20px', md: '34px' }, // Responsive height
+              backgroundColor: '#ff7043',
+              marginTop: { xs: '-15px', sm: '-20px', md: '-34px' },  // Negative margin to overlap the text
+              borderRadius: '2px',
+            }}
+          />
+        </Box>
+
+        {/* Slick Slider */}
+        <Slider {...settings}>
+          {imageData.map((image, index) => (
+            <Box
+              key={index}
+              sx={{
+                position: 'relative',
+                width: '100%',
+                height: { xs: '150px', sm: '200px', md: '250px', lg: '300px' },
+              }}
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                layout="fill"
+                objectFit="cover"
+                objectPosition="center"
+              />
+            </Box>
+          ))}
+        </Slider>
+      </Box>
+
       {/* First Section */}
       <Grid
         container
@@ -60,7 +175,7 @@ const VisionDetails = () => {
       <Grid
         container
         spacing={4}
-        sx={{ padding: '1rem', maxWidth: '1200px', margin: 'auto', marginTop: '2rem', backgroundColor: '#f7f7f7', borderRadius: '8px' }}
+        sx={{ padding: '1rem', maxWidth: '1200px', margin: 'auto', marginTop: '8rem', backgroundColor: '#fff7f0', borderRadius: '8px' }}
       >
         {/* Image Section */}
         <Grid item xs={12} md={6} display="flex" justifyContent="center">
@@ -300,7 +415,7 @@ const VisionDetails = () => {
               width: '100%',
               height: { xs: '300px', md: '400px' },
               position: 'relative',
-              overflow: 'hidden'
+              overflow: 'hidden',
             }}
           >
             <Image
@@ -313,8 +428,90 @@ const VisionDetails = () => {
           </Box>
         </Grid>
       </Grid>
-        
-        <Achievements />
+
+      {/* Impactful steps taken under Minister Piyush Goyal’s tenure Section */}
+      <Grid
+        container
+        spacing={4}
+        sx={{ padding: '1rem', backgroundColor: '#ff7043', borderRadius: '8px', maxWidth: '100%', margin: 'auto', my: '6rem' }}
+      >
+        {/* Title */}
+        <Grid item xs={12} md={12} mb={4}>
+          <Typography
+            variant="h4"
+            component="h2"
+            gutterBottom
+            sx={{ fontWeight: 'bold', fontSize: { xs: '1.5rem', md: '2rem' }, fontFamily: 'Roboto, Arial, sans-serif', textAlign: "center", color: "#fff" }}
+          >
+            Impactful steps taken under<br /> Minister Piyush Goyal’s tenure
+          </Typography>
+        </Grid>
+
+        {/* Image Section */}
+        <Grid item xs={12} md={5}>
+          <Box
+            sx={{
+              width: '100%',
+              height: { xs: '300px', md: '400px' },
+              position: 'relative',
+              overflow: 'hidden',
+              borderRadius: '8px',
+            }}
+          >
+            <Image
+              src="/piyush.jpeg"  // Replace with your image path
+              alt="Impactful steps under Minister Piyush Goyal's tenure"
+              layout="fill"
+              objectFit="contain"   // Ensures the full image is shown
+              style={{
+                objectPosition: 'center',  // Default to center
+              }}
+              sx={{
+                objectPosition: {
+                  xs: 'center', // Centered on small screens
+                  sm: 'center',
+                  md: 'right'  // Aligned right on medium and larger screens
+                }
+              }}
+              priority
+            />
+          </Box>
+        </Grid>
+
+        {/* Text Section */}
+        <Grid item xs={12} md={6} sx={{ color: '#fff' }}>
+          <Typography
+            variant="h6"
+            gutterBottom
+            sx={{ color: '#fff', fontWeight: 'bold', fontFamily: 'Roboto, Arial, sans-serif' }}
+          >
+            भारत में INNOVATION और STARTUP<br /> की क्रांति
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{ fontSize: { xs: '1rem', md: '1.25rem' }, fontFamily: 'Roboto, Arial, sans-serif' }}
+          >
+            Through Startup India, tapped the true potential of our YUVA, resulting in the no of startups increasing from just a few hundred in 2014 to now &gt; 1.4 lakh, making India the 3rd largest Startup ecosystem in the world.
+            <br />
+            India’s innovative talent being encouraged resulted in the number of patents increasing from just 4,227 in 2013-14 to now over record 1 lakh+ in 2023-24.
+          </Typography>
+        </Grid>
+
+        {/* Carousel Buttons */}
+        <Grid item xs={12} sx={{ textAlign: 'center', marginTop: '1rem' }}>
+          <IconButton sx={{ backgroundColor: '#fff', color: '#ff7043', marginRight: '1rem', ':hover': { color: "#fff" } }}>
+            <ArrowBackIosIcon />
+          </IconButton>
+          <IconButton sx={{ backgroundColor: '#fff', color: '#ff7043', ':hover': { color: "#fff" } }}>
+            <ArrowForwardIosIcon />
+          </IconButton>
+        </Grid>
+      </Grid>
+
+
+
+
+      <Achievements />
 
     </Box>
   );
