@@ -10,12 +10,12 @@ import Slider from 'react-slick';
 const VisionDetails = () => {
 
   const imageData = [
-    { src: "/piyush.jpeg", alt: "Thermal" },
-    { src: "/piyush1.jpeg", alt: "Industry" },
-    { src: "/piyush2.jpeg", alt: "Solar Energy" },
-    { src: "/piyush3.jpeg", alt: "Container Shipping" },
-    { src: "/piyush4.jpeg", alt: "Train" },
-    { src: "/piyush5.jpeg", alt: "Buildings" }
+    { src: "/industry.jpg", alt: "Thermal" },
+    { src: "/wind.jpg", alt: "Industry" },
+    { src: "/solar.jpg", alt: "Solar Energy" },
+    { src: "/port.jpg", alt: "Container Shipping" },
+    { src: "/railways.jpg", alt: "Train" },
+    { src: "/infrastructure.jpg", alt: "Buildings" }
   ];
 
   const settings = {
@@ -276,7 +276,7 @@ const VisionDetails = () => {
             }}
           >
             <Image
-              src="/visionPart4.jpg"  // replace with your image path
+              src="/railways.jpg"  // replace with your image path
               alt="Vision for the Indian Railways"
               layout="fill"
               objectFit="contain"
