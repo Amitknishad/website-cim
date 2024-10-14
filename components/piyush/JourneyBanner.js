@@ -2,7 +2,7 @@ import { Box, Typography } from '@mui/material';
 
 export default function PublicLife() {
   return (
-    <Box sx={{padding:4, backgroundColor:"white"}}>
+    <Box sx={{px:4,py:8, backgroundColor:"white"}}>
     <Box
       sx={{
         backgroundColor: '#FF6F3D',
