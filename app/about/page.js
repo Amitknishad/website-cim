@@ -1,9 +1,16 @@
 import { Grid, Box, Typography, Button } from '@mui/material';
 import Image from 'next/image';
+import JourneyBanner from '@/components/piyush/JourneyBanner'
+import Footer from '@/components/piyush/FooterSection'
+import Header from '@/components/piyush/Header';
+import Navbar from '@/components/piyush/Navbar';
+
 
 export default function About() {
   return (
-    <Box>
+    <Box sx={{ backgroundColor: 'white' }}>
+      <Header />
+      <Navbar/>
       <Box
         sx={{
           backgroundColor: 'white',
@@ -16,45 +23,20 @@ export default function About() {
         }}
       >
         <Grid container spacing={2} alignItems="center">
-          {/* Image Container - 50% width on larger screens */}
-          <Grid item xs={12} sm={4} sx={{ display: 'flex', justifyContent: 'center' }}>
-            <Box
-              sx={{
-                width: '100%',
-                maxWidth: { xs: '150px', sm: '200px' }, // Control max size based on screen size
-                position: 'relative',
-                borderRadius: '50%',
-                backgroundColor: '#f57300', // Orange background for the circle
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                overflow: 'hidden',
-                padding: '10px', // Padding inside the circle for the image
-                aspectRatio: '1/1', // Keeps the image circular
-              }}
-            >
-              <Image
-                src="/piyush.jpeg" // Replace with actual image path
-                alt="Piyush Goyal"
-                layout="fill"
-                objectFit="cover"
-                style={{ borderRadius: '50%' }} // Ensure the image stays circular
-              />
-            </Box>
-          </Grid>
 
           {/* Content Box */}
           <Grid item xs={12} sm={7}>
             <Box sx={{ ml: { sm: '22px' }, textAlign: { xs: 'center', sm: 'left' } }}>
               <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#E17000' }}>
-                About
+                SHRI PIYUSH GOYAL
               </Typography>
               <Typography variant="h5" fontWeight="bold" gutterBottom>
-                Piyush Goyal
+                BIOGRAPHY
               </Typography>
               <Typography variant="body1" paragraph>
-                Piyush Goyal (60) is the Union Minister of Commerce & Industry and Member of Parliament, North Mumbai Lok Sabha. He has previously served as the Leader of the House in Rajya Sabha and helmed the Ministry of Consumer Affairs and Food & Public Distribution, Textiles, Railways, Finance, Corporate Affairs, Coal, Power, New & Renewable Energy, and Mines.
+                Piyush Goyal is a senior Indian politician currently serving as the Union Minister of Commerce & Industry and the Member of Parliament for North Mumbai Lok Sabha. Over his illustrious career, he has held several key portfolios in the Government of India, including the Ministry of Railways, Finance, Corporate Affairs, Consumer Affairs, Food & Public Distribution, Textiles, Coal, Power, New & Renewable Energy, and Mines. He has also served as the Leader of the House in Rajya Sabha.
               </Typography>
+
 
               {/* Horizontal Line */}
               <Box
@@ -91,8 +73,51 @@ export default function About() {
               </Button>
             </Box>
           </Grid>
+
+          {/* Image Container */}
+          <Grid item xs={12} sm={4} sx={{ display: 'flex', justifyContent: 'center' }}>
+            <Box
+              sx={{
+                background: 'linear-gradient(to right, white 30%, #f27c21 20%)',
+                width: '100%',
+                height: '100%',
+                borderRadius: '20px',  // Border radius added here
+                overflow: 'hidden'      // Ensure the radius is applied properly
+              }}>
+              <Box
+                sx={{
+                  width: '100%',
+                  maxWidth: { xs: '150px', sm: '200px' }, // Control max size based on screen size
+                  height: '100%',
+                  position: 'relative',
+                  borderRadius: '50%',
+                  backgroundColor: '#f57300', // Orange background for the circle
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  overflow: 'hidden',
+                  padding: '10px', // Padding inside the circle for the image
+                  aspectRatio: '1/1', // Keeps the image circular
+                  marginLeft: '60px',
+                }}
+              >
+                <Image
+                  src="/piyushAbout.jpg" // Replace with actual image path
+                  alt="Piyush Goyal"
+                  layout="fill"
+                  objectFit="cover"
+                  style={{ borderRadius: '50%' }} // Ensure the image stays circular
+                />
+              </Box>
+            </Box>
+          </Grid>
+
         </Grid>
       </Box>
+
+      <JourneyBanner />
+      <Footer />
+
     </Box>
   );
 }

@@ -192,6 +192,7 @@ const VisionDetails = () => {
               alt="Infrastructure Development"
               layout="fill"
               objectFit="contain"
+              objectPosition='top'
               priority
             />
           </Box>
@@ -280,6 +281,7 @@ const VisionDetails = () => {
               alt="Vision for the Indian Railways"
               layout="fill"
               objectFit="contain"
+              objectPosition='top'
               priority
             />
           </Box>
@@ -341,6 +343,7 @@ const VisionDetails = () => {
               alt="Energy Reforms"
               layout="fill"
               objectFit="contain"
+              objectPosition='top'
               priority
             />
           </Box>
@@ -367,6 +370,7 @@ const VisionDetails = () => {
               alt="Sustainable Economic Growth"
               layout="fill"
               objectFit="contain"
+              objectPosition='top'
               priority
             />
           </Box>
@@ -423,6 +427,7 @@ const VisionDetails = () => {
               alt="Digital India: A Technologically Advanced Nation"
               layout="fill"
               objectFit="contain"
+              objectPosition='top'
               priority
             />
           </Box>
@@ -459,12 +464,13 @@ const VisionDetails = () => {
             }}
           >
             <Image
-              src="/piyush.jpeg"  // Replace with your image path
+              src="/innovation.jpg"  // Replace with your image path
               alt="Impactful steps under Minister Piyush Goyal's tenure"
               layout="fill"
-              objectFit="contain"   // Ensures the full image is shown
+              objectFit="contain"
+                // Ensures the full image is shown
               style={{
-                objectPosition: 'center',  // Default to center
+                objectPosition: 'top',  // Default to center
               }}
               sx={{
                 objectPosition: {
