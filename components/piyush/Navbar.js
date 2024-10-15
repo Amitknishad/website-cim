@@ -143,13 +143,13 @@ const Navbar = () => {
                 <MenuItem onClick={handleMenuClose}>About Option 2</MenuItem>
               </Menu>
 
-              {/* Gallery dropdown */}
-              <Button color="inherit" onClick={(event) => handleMenuOpen(event, 'gallery')}>
-                Gallery {openMenu === 'gallery' ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
+              {/* My Views dropdown */}
+              <Button color="inherit" onClick={(event) => handleMenuOpen(event, 'myViews')}>
+                My Views {openMenu === 'myViews' ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
               </Button>
-              <Menu anchorEl={anchorEl} open={openMenu === 'gallery'} onClose={handleMenuClose}>
-                <MenuItem onClick={handleMenuClose}>Gallery Option 1</MenuItem>
-                <MenuItem onClick={handleMenuClose}>Gallery Option 2</MenuItem>
+              <Menu anchorEl={anchorEl} open={openMenu === 'myViews'} onClose={handleMenuClose}>
+                <MenuItem onClick={handleMenuClose}>My Views Option 1</MenuItem>
+                <MenuItem onClick={handleMenuClose}>My Views Option 2</MenuItem>
               </Menu>
 
               {/* Press dropdown */}
@@ -161,16 +161,17 @@ const Navbar = () => {
                 <MenuItem onClick={handleMenuClose}>Press Option 2</MenuItem>
               </Menu>
 
+              {/* Gallery dropdown */}
+              <Button color="inherit" onClick={(event) => handleMenuOpen(event, 'gallery')}>
+                Gallery {openMenu === 'gallery' ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
+              </Button>
+              <Menu anchorEl={anchorEl} open={openMenu === 'gallery'} onClose={handleMenuClose}>
+                <MenuItem onClick={handleMenuClose}>Gallery Option 1</MenuItem>
+                <MenuItem onClick={handleMenuClose}>Gallery Option 2</MenuItem>
+              </Menu>
+
               <Button color="inherit">Contact</Button>
 
-              {/* My Views dropdown */}
-              <Button color="inherit" onClick={(event) => handleMenuOpen(event, 'myViews')}>
-                My Views {openMenu === 'myViews' ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
-              </Button>
-              <Menu anchorEl={anchorEl} open={openMenu === 'myViews'} onClose={handleMenuClose}>
-                <MenuItem onClick={handleMenuClose}>My Views Option 1</MenuItem>
-                <MenuItem onClick={handleMenuClose}>My Views Option 2</MenuItem>
-              </Menu>
 
               {/* Expanding Search Icon and Input */}
               <Box sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
@@ -244,14 +245,14 @@ const Navbar = () => {
               </Box>
             </Collapse>
 
-            {/* Gallery dropdown in drawer */}
-            <MenuItem onClick={() => handleDropdownToggle('gallery')}>
-              Gallery {dropdownOpen.gallery ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
+            {/* My Views dropdown in drawer */}
+            <MenuItem onClick={() => handleDropdownToggle('myViews')}>
+              My Views {dropdownOpen.myViews ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
             </MenuItem>
-            <Collapse in={dropdownOpen.gallery}>
+            <Collapse in={dropdownOpen.myViews}>
               <Box sx={{ paddingLeft: 2 }}>
-                <MenuItem>Gallery Option 1</MenuItem>
-                <MenuItem>Gallery Option 2</MenuItem>
+                <MenuItem>My Views Option 1</MenuItem>
+                <MenuItem>My Views Option 2</MenuItem>
               </Box>
             </Collapse>
 
@@ -266,18 +267,20 @@ const Navbar = () => {
               </Box>
             </Collapse>
 
-            <MenuItem onClick={toggleDrawer}>Contact</MenuItem>
-
-            {/* My Views dropdown in drawer */}
-            <MenuItem onClick={() => handleDropdownToggle('myViews')}>
-              My Views {dropdownOpen.myViews ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
+            {/* Gallery dropdown in drawer */}
+            <MenuItem onClick={() => handleDropdownToggle('gallery')}>
+              Gallery {dropdownOpen.gallery ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
             </MenuItem>
-            <Collapse in={dropdownOpen.myViews}>
+            <Collapse in={dropdownOpen.gallery}>
               <Box sx={{ paddingLeft: 2 }}>
-                <MenuItem>My Views Option 1</MenuItem>
-                <MenuItem>My Views Option 2</MenuItem>
+                <MenuItem>Gallery Option 1</MenuItem>
+                <MenuItem>Gallery Option 2</MenuItem>
               </Box>
             </Collapse>
+            
+            <MenuItem onClick={toggleDrawer}>Contact</MenuItem>
+
+
           </Box>
         </Drawer>
       </AppBar>
