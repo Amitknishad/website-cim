@@ -32,7 +32,7 @@ export default function FilterBar() {
                         borderRadius: '10px',
                         borderColor: '#E59A76',
                         color: '#E59A76',
-                        textAlign:"center",
+                        textAlign: "center",
                         '& .MuiOutlinedInput-notchedOutline': {
                             borderColor: '#E59A76',
                         },
