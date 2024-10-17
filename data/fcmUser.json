@@ -1,0 +1,25 @@
+{
+  "uid": "XpmFVFOAvBdSSWQCIHchUI1C5c03",
+  "emailVerified": false,
+  "isAnonymous": false,
+  "phoneNumber": "+918787080394",
+  "providerData": [
+    {
+      "providerId": "phone",
+      "uid": "+918787080394",
+      "displayName": null,
+      "email": null,
+      "phoneNumber": "+918787080394",
+      "photoURL": null
+    }
+  ],
+  "stsTokenManager": {
+    "refreshToken": "AMf-vBzu8ZpQClhHgrj2GpamUs1dYvYOomuOyekVqwc8O3CMfQw04nfhHE0HbcwuzEL9YTygrcAyxuqB2XZ9Vn0oQX1mShga60AoHp7J_W9aWKjtEeVSHVM2bzXibQG-EnnyM9UGcX_r0Awwu9S5UzrBxOlF8AuqIgvdbP9Aps3JTzwO4iWpg_oiOSwLVOQ6K8zajGA0Mnnf",
+    "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjhkOWJlZmQzZWZmY2JiYzgyYzgzYWQwYzk3MmM4ZWE5NzhmNmYxMzciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vaHNvbWJpcmxhIiwiYXVkIjoiaHNvbWJpcmxhIiwiYXV0aF90aW1lIjoxNzI4OTkxODc2LCJ1c2VyX2lkIjoiWHBtRlZGT0F2QmRTU1dRQ0lIY2hVSTFDNWMwMyIsInN1YiI6IlhwbUZWRk9BdkJkU1NXUUNJSGNoVUkxQzVjMDMiLCJpYXQiOjE3Mjg5OTE4NzYsImV4cCI6MTcyODk5NTQ3NiwicGhvbmVfbnVtYmVyIjoiKzkxODc4NzA4MDM5NCIsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsicGhvbmUiOlsiKzkxODc4NzA4MDM5NCJdfSwic2lnbl9pbl9wcm92aWRlciI6InBob25lIn19.eiGVUzMmPYsBgG5uEfN3YEVHx19kyxuPguPGdTiMkXvF6OUUFReHbRs2WZyMF_ZxV0q7k9fv0_hNsZDQSOHlOBbtRhsuwFSRtfBSZe17IGkiz1EGv9IPUv9J17NtqXQMpQbf5oCorrQ4G_9Pb2rxDz-PtVYY-XUGWXObCp57fy2bRvfMNZQQ6mZPcHzcrhHImxV3MnRZRQlG2QwXeh4TNzf8p_orAXK25kwPqrZKm9AZCSCtcTxsCHLTbu2stKq4rjHjzZ5cy75QmBkQEDiUrDNBFYZO1IBKQHCxa5zHwLno5EAk5Ftd4m0x_0nO-n9XsJeVilfX6YNeGVGkR48ZkA",
+    "expirationTime": 1728995474684
+  },
+  "createdAt": "1654782520195",
+  "lastLoginAt": "1728991876021",
+  "apiKey": "AIzaSyBQzmPPw8Da0i5-jrYEKTB7fvFrRAqDpdI",
+  "appName": "[DEFAULT]"
+}

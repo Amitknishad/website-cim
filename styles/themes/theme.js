@@ -9,7 +9,7 @@ const theme = createTheme({
 		mode: 'light',
 		divider : colorPrimary[100],
 		primary: {
-			main: colorPrimary[900],
+			main: colorPrimary[700],
 			contrastText: "#fff"
 		},
 		secondary: {
@@ -23,7 +23,7 @@ const theme = createTheme({
 		text : {
 			primary: "#000",
 			secondary: "#aaa",
-			disabled: "#aaa"
+			disabled: "#bbb"
 		},
 		background : {
 			paper: "white",

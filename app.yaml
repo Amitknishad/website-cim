@@ -5,7 +5,7 @@ runtime: nodejs20
 # what follows will be optional in the future:
 
 # service: default
-service: oms
+service: omsrajs20
 # service: api
 # service: m
 # service: grievances
@@ -13,7 +13,7 @@ service: oms
 # delete manually => ./build/cache/webpack/client-production/0.pack file ( 300+ MB )
 
 # npm run build --prod=true
-# gcloud app deploy --version=live
+# gcloud app deploy --version=live   https://omsrajs20-dot-surveysewa.appspot.com/home
 
 instance_class: F1
 
