@@ -35,13 +35,16 @@ export default function About() {
           {/* Content Box */}
           <Grid item xs={12} sm={7}>
             <Box sx={{ ml: { sm: '22px' }, textAlign: { xs: 'center', sm: 'left' } }}>
-              <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#E17000' }}>
+              <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#ff7e54' }}>
                 SHRI PIYUSH GOYAL
               </Typography>
               <Typography variant="h5" fontWeight="bold" gutterBottom>
                 BIOGRAPHY
               </Typography>
-              <Typography variant="body1" paragraph>
+              <Typography variant="body1" paragraph sx={{
+                fontSize:'16px'
+
+              }}>
                 Piyush Goyal is a senior Indian politician currently serving as the Union Minister of Commerce & Industry and the Member of Parliament for North Mumbai Lok Sabha. Over his illustrious career, he has held several key portfolios in the Government of India, including the Ministry of Railways, Finance, Corporate Affairs, Consumer Affairs, Food & Public Distribution, Textiles, Coal, Power, New & Renewable Energy, and Mines. He has also served as the Leader of the House in Rajya Sabha.
               </Typography>
 
@@ -90,7 +93,7 @@ export default function About() {
           <Grid item xs={12} sm={4} sx={{ display: 'flex', justifyContent: 'center' }}>
             <Box
               sx={{
-                background: 'linear-gradient(to right, white 30%, #f27c21 20%)',
+                background: 'linear-gradient(to right, white 30%, #ff7e54 15%)',
                 width: '100%',
                 height: '100%',
                 borderRadius: '20px',  // Border radius added here
