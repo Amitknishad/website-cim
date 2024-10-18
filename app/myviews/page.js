@@ -5,6 +5,7 @@ import Navbar from "@/components/piyush/Navbar";
 import Footer from "@/components/piyush/FooterSection";
 import FilterBar from '@/components/myviews/FilterBar';
 import CustomCard from "@/components/myviews/CustomCard";
+import ImageCard from "@/components/myviews/ImageCard";
 
 
 
@@ -38,6 +39,11 @@ const blogData = [
   { id: 12, title: 'Digital India: Key steps forward from the Budget...', date: '08/03/2024', time: '11:00am', image: '/blog/blog6.png', description: `In my post budget interview to Business Standard, I explain how the visionary budget of Amrit Kaal envisages PM Narendra Modi ji's`, },
 ];
 
+const imageData = ['/quotes/quote1.png', '/quotes/quote3.jpg', '/quotes/quote4.jpg', '/quotes/quote5.jpg', '/quotes/quote6.png', '/quotes/quote7.png',
+  '/quotes/quote1.png', '/quotes/quote3.jpg', '/quotes/quote4.jpg', '/quotes/quote5.jpg', '/quotes/quote6.png', '/quotes/quote7.png'
+]
+
+
 const myViews = () => {
   return (
     <Box>
@@ -45,6 +51,7 @@ const myViews = () => {
       <Navbar />
       <FilterBar />
       <CustomCard cardData={articlesData} heading='Top Trending Articles' />
+      <ImageCard imageData={imageData} heading='Quotes'/>
       <CustomCard cardData={blogData} heading='Blog' />
       <Footer />
     </Box>
