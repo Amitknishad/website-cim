@@ -59,11 +59,11 @@ const CustomCard = (props) => {
                   <Typography variant="body2" color="textSecondary" gutterBottom>
                     {article.date} - {article.time}
                   </Typography>
-                  <Typography variant="h6" sx={{ marginY: 1, fontWeight: "bold" }}>
+                  <Typography variant="h4" sx={{ marginY: 1, fontWeight: "bold" }}>
                     {article.title}
                   </Typography>
                   <Typography variant="body2" paragraph>
-                    {article.description}
+                    {article.description?.substring(0,100)+ '...'}
                   </Typography>
                   <Button variant="text" sx={{ textTransform: "none", color: "#f27c21" }}>
                     Read More &gt;
