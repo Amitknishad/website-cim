@@ -104,7 +104,7 @@ function VideoCard({ video, title, isMobile, isTablet }) {
     };
 
     return (
-        <Box px={isMobile ? 2 : 3} boxSizing="border-box">
+        <Box p={isMobile ? 2 : 3}  boxSizing="border-box">
             <Card
                 sx={{
                     borderRadius: '16px',
