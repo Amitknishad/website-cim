@@ -9,6 +9,7 @@ import HeaderOption from "../../components/press/HeaderOption"
 import { Box } from "@mui/material";
 import VideoCard from "../../components/gallery/VideoCard";
 import ImageCard from "@/components/myviews/ImageCard";
+import BookletsDocuments from "@/components/gallery/BookletsDocuments"
 
 const Gallery = () =>{
     const imageData = ['/gallery/galleryImg1.jpg', '/gallery/galleryImg2.jpeg', '/gallery/galleryImg3.jpeg', '/gallery/galleryImg4.avif', '/gallery/galleryImg5.jpeg', '/gallery/galleryImg7.avif',
@@ -29,7 +30,9 @@ const Gallery = () =>{
        <HeaderOption/>
         
         <VideoCard/>
-        <ImageCard imageData={imageData} heading='Images'/>
+        <ImageCard imageData={imageData} heading='Images' downloadable={true}/>
+        <BookletsDocuments heading='Booklets & Ducuments'/>
+
         <FooterSection/>
        </Box>
 
