@@ -5,14 +5,14 @@ const ContactHeading=()=>{
     return(
         <Box sx={{backgroundColor:'#fab1a0'}}>
             <Typography varient='h4' sx={{textAlign:'center',
-                 padding:'50px 0 50px',
+                 padding:'65px 0 65px',
                 color:'white',
                 fontWeight:'bold',
                 fontSize:{
-                    xs:'25px',
-                    sm:'30px',
-                    md:'40px',
-                    lg: '40px'
+                    xs:'35px',
+                    sm:'40px',
+                    md:'50px',
+                    lg: '60px'
                 }
 
             }}>

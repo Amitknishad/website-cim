@@ -6,6 +6,7 @@ import Header from "@/components/piyush/Header";
 import Navbar from "@/components/piyush/Navbar";
 import { Box } from "@mui/material";
 import React from "react";
+import SignUpNewsLetter from "@/components/contact/SignUpNewsLetter";
 
 const ContactUs=()=>{
     return(
@@ -14,6 +15,7 @@ const ContactUs=()=>{
           <Navbar/>
           <ContactHeading/>
           <ContactForm/>
+          <SignUpNewsLetter/>
           <Footer/>
       </Box>
 
