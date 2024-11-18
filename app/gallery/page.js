@@ -24,16 +24,12 @@ const Gallery = () =>{
       
     return(
        <Box>
-       <Header/>
-       <Navbar/>
        <FilterBar/>
        <HeaderOption/>
         
         <VideoCard/>
         <ImageCard imageData={imageData} heading='Images' downloadable={true}/>
         <BookletsDocuments heading='Booklets & Ducuments'/>
-
-        <FooterSection/>
        </Box>
 
     )

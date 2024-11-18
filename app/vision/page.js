@@ -8,10 +8,7 @@ import Footer from '@/components/piyush/FooterSection';
 const Vision = () => {
     return (
         <Box>
-            <Header />
-            <Navbar />
             <VisionDetails />
-            <Footer />
         </Box>
     )
 }

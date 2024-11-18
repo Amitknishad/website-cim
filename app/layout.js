@@ -4,6 +4,9 @@ import ThemeClient from '../components/ThemeClient';
 import { colorPrimary } from '../styles/colors';
 
 import { Inter } from "next/font/google";
+import Navbar from '@/components/piyush/Navbar';
+import Footer from '@/components/piyush/FooterSection';
+import Header from '@/components/piyush/Header';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,7 +29,9 @@ export default function RootLayout({ children }) {
       {/* <!-- iOS Safari --> */}
       <meta name="apple-mobile-web-app-status-bar-style" content={themeColor} ></meta>
 
-      <body className={inter.className}>      
+      <body className={inter.className}>  
+      <Header />
+      <Navbar />    
         <main style={{ 
           // background: `linear-gradient(0deg, #F7FBFE, #B3D7E7, #1a63d3 )`,
           backgroundColor : colorPrimary[50],
@@ -34,6 +39,7 @@ export default function RootLayout({ children }) {
         }} > 
           <ThemeClient>{children}</ThemeClient> 
         </main>
+        <Footer />
       </body>
     </html>
 );

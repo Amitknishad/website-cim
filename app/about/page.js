@@ -18,8 +18,6 @@ export default function About() {
 
   return (
     <Box sx={{ backgroundColor: 'white' }}>
-      <Header />
-      <Navbar />
       <Box
         sx={{
           backgroundColor: 'white',
@@ -202,7 +200,6 @@ export default function About() {
         )}
       </Box>
       <JourneyBanner />
-      <Footer />
     </Box>
   );
 }

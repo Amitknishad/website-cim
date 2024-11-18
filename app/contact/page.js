@@ -11,12 +11,9 @@ import SignUpNewsLetter from "@/components/contact/SignUpNewsLetter";
 const ContactUs=()=>{
     return(
       <Box>
-          <Header/>
-          <Navbar/>
           <ContactHeading/>
           <ContactForm/>
           <SignUpNewsLetter/>
-          <Footer/>
       </Box>
 
 

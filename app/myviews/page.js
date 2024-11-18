@@ -47,13 +47,10 @@ const imageData = ['/quotes/quote1.png', '/quotes/quote3.jpg', '/quotes/quote4.j
 const myViews = () => {
   return (
     <Box>
-      <Header />
-      <Navbar />
       <FilterBar />
       <CustomCard cardData={articlesData} heading='Top Trending Articles' />
       <ImageCard imageData={imageData} heading='Quotes'/>
       <CustomCard cardData={blogData} heading='Blog' />
-      <Footer />
     </Box>
   )
 }

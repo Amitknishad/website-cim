@@ -30,17 +30,11 @@ const Press = () => {
       
     return(
         <Box>
-            <Header/>
-            <Navbar/>
-
-            
             <HeaderOption/>
             <CustomCard cardData={articlesData} />
             <PressUpcomingEvent/>
             <JoinAsVolunteer/>
             <QuickView/>
-            <FooterSection/>
-            
         </Box>
     )
 

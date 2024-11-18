@@ -25,8 +25,6 @@ const Home = () => {
 
     return (
         <Box>
-            <Header />
-            <Navbar />
             <CarouselComponent />
             <FeaturedSection />
             {/* <JoinCards /> */}
@@ -42,7 +40,6 @@ const Home = () => {
             <InternationalCoverageSection/>
             <Press/>
             <SpeechSection/>
-            <Footer />
 
             {/* <About /> */}
         </Box>
